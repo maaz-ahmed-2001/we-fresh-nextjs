@@ -25,7 +25,7 @@ export const YellowCircleSvg = ({ height, width }) => {
     <svg
       width={ width || "472" }
       height={ height || "411" }
-      className={`absolute -left-[34%] top-[23%] -z-10`}
+      className={`absolute -left-[26%] top-[5%] -z-10`}
       viewBox="0 0 472 411"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

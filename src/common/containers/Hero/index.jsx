@@ -1,14 +1,15 @@
 import Container from "../../components/Container";
 import React, { useState } from "react";
 import InputComponent from "../../components/Input";
-import ActionButton from '../../components/Button'
+import ActionButton from '../../components/Button';
 import { AppleIconSvg } from "../../components/Icons";
+import SectionWrapper from "@/common/components/SectionWrapper";
 
 const index = () => {
   const [number, setNumber] = useState();
   return (
     // HERO SECTION
-    <section className="w-full bg-slate-300 py-20">
+    <SectionWrapper className='h-[840px] bg-slate-300' >
       <Container explicitClassName="flex gap-7 sm:gap-4 flex-col sm:flex-row">
         <div className="p-5 mt-10 m-auto flex gap-5 flex-col bg-red-300 ">
           {/* H2 HEADING */}
@@ -38,7 +39,7 @@ const index = () => {
           <img src="/iPhone_Black.png" alt="#" className="h-96" />
         </div>
       </Container>
-    </section>
+    </SectionWrapper>
   );
 };
 

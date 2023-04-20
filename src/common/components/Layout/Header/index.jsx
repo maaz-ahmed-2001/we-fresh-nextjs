@@ -1,10 +1,11 @@
 import Container from "../../Container";
 import React from "react";
+import SectionWrapper from "../../SectionWrapper";
 
 const index = () => {
   return (
     <header className="absolute w-full top-0 left-0  pt-5">
-      <Container>
+      <SectionWrapper className='!p-0' >
         <nav className="flex items-center px-5 sm:px-0 justify-between sm:justify-around">
           {/* LOGO */}
           <svg
@@ -50,7 +51,7 @@ const index = () => {
             <rect y="10" width="15" height="2" rx="1" fill="black" />
           </svg>
         </nav>
-      </Container>
+      </SectionWrapper>
     </header>
   );
 };
