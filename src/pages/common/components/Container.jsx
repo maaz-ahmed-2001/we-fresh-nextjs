@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Container = ({ children, explicitClassName, component }) => {
+const Container = ({ children, explicitClassName }) => {
   return (
     <div className={`max-w-7xl block m-auto ${explicitClassName}`} >
         {children}

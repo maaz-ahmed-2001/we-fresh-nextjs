@@ -1,36 +1,40 @@
 import Container from "../../components/Container";
-import React from "react";
+import React, { useState } from "react";
+import InputComponent from "../../components/Input";
+import ActionButton from '../../components/Button'
+import { AppleIconSvg } from "../../components/Icons";
 
 const index = () => {
+  const [number, setNumber] = useState();
   return (
     // HERO SECTION
-    <section className="w-full relative  max-h-fit pt-32">
-      <img
-        src="/Fill 1.svg"
-        className="-z-10 absolute top-0  sm:bottom-0 sm:left-0"
-      />
-      <Container explicitClassName="flex items-start gap-5 flex-col sm:flex-row justify-evenly">
-        <div className="p-5 mt-10 m-auto flex gap-5 flex-col">
+    <section className="w-full bg-slate-300 py-20">
+      <Container explicitClassName="flex gap-7 sm:gap-4 flex-col sm:flex-row">
+        <div className="p-5 mt-10 m-auto flex gap-5 flex-col bg-red-300 ">
           {/* H2 HEADING */}
-          <h2 className="text-3xl">
+          <h2 className="text-3xl text-white">
             The smarter way <br /> <strong>to order your food</strong>
           </h2>
           {/* FORM DIV */}
           <div className="flex items-center justify-between">
-            <input type="text" placeholder="Enter Number" />
-            <button>Send</button>
+            <InputComponent
+              type="number"
+              state={number}
+              setState={setNumber}
+              placeholder="Enter Phone Number."
+            />
+            <ActionButton width={'fit-content'} >Send</ActionButton>
           </div>
           {/* SOCIAL ICONS */}
           <div>
-            <small className="text-sm">Available on</small>
-            {/* APPLE ICON */}
+            <small className="text-xs font-semibold text-white">Available on</small>
             <div className="flex items-start gap-4">
-              <img src="/Apple.svg" alt="" />
-              <img src="/Googleplay.svg" alt="" />
+              <AppleIconSvg height='25px' width='25px' />
+              <img src="/Googleplay.svg" className="w-[25px] h-[25px]"  />
             </div>
           </div>
         </div>
-        <div className="m-auto">
+        <div className="m-auto bg-yellow-300 ">
           <img src="/iPhone_Black.png" alt="#" className="h-96" />
         </div>
       </Container>

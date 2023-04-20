@@ -10,3 +10,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+.section-heading {
+  @apply text-2xl text-txt-blue
+}
