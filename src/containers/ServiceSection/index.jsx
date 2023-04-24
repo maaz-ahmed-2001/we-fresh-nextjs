@@ -1,6 +1,6 @@
 import React from "react";
-import ServicesWrapper from "../../components/ServicesWrapper";
-import { SectionHeadings } from "../../components/Headings";
+import ServicesWrapper from "@/common/components/ServicesWrapper";
+import { SectionHeadings } from "@/common/components/Headings";
 import FlexCenter from "@/common/components/FlexCenter";
 import { YellowCircleSvg } from "@/common/components/Icons";
 import FlexColumn from "@/common/components/FlexColumn";
@@ -9,7 +9,7 @@ import SectionWrapper from "@/common/components/SectionWrapper";
 const index = () => {
   return (
     <SectionWrapper className='h-full max-h-[calc(566px+770px)]' >
-      <div className="flex flex-col items-center justify-center gap-8 py-10">
+      <div className="flex flex-col items-center justify-center gap-10 py-10">
         <SectionHeadings
           className="max-w-[428px] w-full h-[70px] text-center"
           boldText="services"

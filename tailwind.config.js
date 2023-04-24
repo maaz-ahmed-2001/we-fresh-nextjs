@@ -13,9 +13,11 @@ module.exports = {
       },
       colors:{
         'btn-bg':'#FFD476',
+        'bg-blue':'#F2F9FF',
         'txt-blue':'#68BAE3',
         'blue-light':'#EBF7FC',
         'light-grey':'#E8E8E8',
+        'border':'#E8E8E8'
       }
     },
   },

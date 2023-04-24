@@ -2,15 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-
+p {
+  @apply text-gray-400
+}
 
 body {
   background-color: #fff;
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
   box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+h6 {
+  @apply font-medium
 }
 
 .section-heading {
-  @apply text-2xl text-txt-blue text-center
+  @apply text-[42px] text-txt-blue text-center
 }
