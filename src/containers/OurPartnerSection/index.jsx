@@ -7,56 +7,61 @@ import React from "react";
 
 const index = () => {
   return (
-    <SectionWrapper className="!p-10 h-[760px]">
-      <FlexCenter className="h-full max-h-[760px] !justify-start w-full relative gap-3">
+    <SectionWrapper className="sm:!p-10 h-max lg:h-[760px] !px-0 ">
+      <FlexCenter className="h-full !flex-col lg:!flex-row max-h-[760px] !justify-start w-full gap-16 lg:gap-3">
         {/* OUR PARTNERS */}
-        <FlexColumn className="relative w-full  h-[354px] sm:h-[410px] max-w-[547px]">
-          {/* BLUE BG SVG */}
-          <OurPartnersSectionBlueSvg/>
-          <SectionHeadings
-            boldText="Partners"
-            orientation="normal"
-            normalText="Our"
-            className="max-w-[264px] text-center w-full h-full max-h-[70px] !text-4xl"
-          />
-          <p className="h-full w-full max-h-[120px] max-w-[326px] text-sm">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
-            eiusmod.
-          </p>
-        </FlexColumn>
+        <FlexCenter className="relative w-full h-max lg:max-w-[50%] xl:max-w-[40%] lg:h-full py-20">
+          <FlexColumn className="gap-4 my-10 px-10 h-max sm:my-0 sm:max-w-[473px] lg:max-w-[547px]">
+            {/* BLUE BG SVG */}
+            <div className="absolute -z-10 top-0 left-[-5%] sm:left-0 w-[105%] h-[105%] sm:w-[100%] sm:h-[100%]">
+              <OurPartnersSectionBlueSvg />
+            </div>
+            <SectionHeadings
+              boldText="Partners"
+              orientation="normal"
+              normalText="Our"
+              className="max-w-[264px] text-center w-full h-full max-h-[70px]"
+            />
+            <p className="max-h-[120px] max-w-[326px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do
+              eiusmod.
+            </p>
+          </FlexColumn>
+        </FlexCenter>
         {/* ABSOLUTE IMAGES */}
-        <FlexCenter className="flex-grow h-[100%]">
-          <FlexCenter className='h-[90%] w-[90%] relative ' >
-            <div className="max-h-[175px] absolute top-[10%] left-[17%] h-full w-full max-w-[175px]">
+        <FlexCenter className="lg:flex-grow w-[100%] sm:w-[80%] md:w-[63%] h-[900px] lg:h-[100%]">
+          <FlexCenter className="lg:h-[90%] w-full h-full lg:w-[90%] relative ">
+            {/* TOP_LEFT CIRCLE */}
+            <div className="h-[91px] md:h-[130px] xl:h-[175px] absolute top-[20%] lg:top-[18%] xl:top-[10%] left-[13%] lg:left-[12%] xl:left-[17%] w-[91px] md:w-[130px] xl:w-[175px]">
               <img
                 src="/OurPartnersSection/7-Eleven.png"
                 className="h-full w-full"
               />
             </div>
-
-            <div className="max-h-[175px] absolute top-[33%] left-[38%] h-full w-full max-w-[175px]">
+            {/* CENTRAL CIRCLE */}
+            <div className="h-[91px] md:h-[130px] xl:h-[175px] absolute top-[35%] lg:top-[33%] left-[35%] lg:left-[33%] xl:left-[38%] w-[91px] md:w-[130px] xl:w-[175px]">
               <img
                 src="/OurPartnersSection/7-Eleven.png"
                 className="h-full w-full"
               />
             </div>
-
-            <div className="max-h-[175px] absolute top-[60%] left-[57%] h-full w-full max-w-[175px]">
+            {/* BOTTOM RIGHT CIRCLE */}
+            <div className="h-[91px] md:h-[130px] xl:h-[175px] absolute top-[55%] lg:top-[48%] xl:top-[60%] left-[55%] lg:left-[52%] xl:left-[57%] w-[91px] md:w-[130px] xl:w-[175px]">
               <img
                 src="/OurPartnersSection/7-Eleven.png"
                 className="h-full w-full"
               />
             </div>
-
-            <div className="max-h-[175px] absolute top-[55%] left-[17%] h-full w-full max-w-[175px]">
+            {/* BOTTOM LEFT CIRCLE */}
+            <div className="h-[91px] md:h-[130px] xl:h-[175px] absolute top-[52%] lg:top-[44%] xl:top-[55%] left-[13%] lg:left-[4%] xl:left-[17%] w-[91px] md:w-[130px] xl:w-[175px]">
               <img
                 src="/OurPartnersSection/7-Eleven.png"
                 className="h-full w-full"
               />
             </div>
-
-            <div className="max-h-[175px] absolute top-[20%] left-[65%] h-full w-full max-w-[175px]">
+            {/* TOP_RIGHT CIRCLE */}
+            <div className="h-[91px] md:h-[130px] xl:h-[175px] absolute top-[26%] lg:top-[25%] xl:top-[20%] left-[60%] lg:left-[63%] xl:left-[68%] w-[91px] md:w-[130px] xl:w-[175px]">
               <img
                 src="/OurPartnersSection/7-Eleven.png"
                 className="h-full w-full"

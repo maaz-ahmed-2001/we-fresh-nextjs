@@ -49,7 +49,7 @@ const index = () => {
           </p>
         </FlexColumn>
         {/* CONTACT INFO DIV'S */}
-        <FlexCenter className="w-full h-max gap-3">
+        <FlexCenter className="w-full !flex-col sm:!flex-row  h-max gap-3">
           <InfoBox
             heading="+66 8959888"
             paragraph="Lorem ipsum dolor sit amet, consectetur"
@@ -68,7 +68,7 @@ export default index;
 
 export const InfoBox = ({ heading, paragraph }) => {
   return (
-    <FlexColumn className="w-full max-w-[380px] gap-3 rounded-md border-border border-2 h-[199px]">
+    <FlexColumn className="w-[280px] sm:w-[380px] gap-3 rounded-md border-border border-2 h-[199px]">
       <h6 className="">{heading}</h6>
       <p className="max-w-[317px] text-center w-full">{paragraph}</p>
     </FlexColumn>
@@ -77,9 +77,9 @@ export const InfoBox = ({ heading, paragraph }) => {
 
 export const QuerySections = ({ paragraph, heading }) => {
   return (
-    <FlexColumn className="max-w-[780px] group hover:h-fit p-5 !items-start w-full min-h-[70px] border-2 rounded-md hover:border-txt-blue border-border bg-white gap-2 ">
+    <FlexColumn className="max-w-[780px] group hover:h-fit p-3 sm:p-5 !items-start w-full min-h-[70px] border-2 rounded-md hover:border-txt-blue border-border bg-white gap-2 ">
       <h6 className="group-hover:text-txt-blue">{heading}</h6>
-      <p className="max-w-[679px] group-hover:block group-hover:h-fit h-0 hidden w-full">
+      <p className="sm:max-w-[679px] group-hover:block group-hover:h-fit h-0 hidden w-full">
         {paragraph}
       </p>
     </FlexColumn>

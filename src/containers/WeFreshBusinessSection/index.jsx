@@ -12,9 +12,9 @@ const index = () => {
     <SectionWrapper className="h-full max-h-[400px]">
       <FlexColumn className="gap-4">
         {/* DESCRIPTIONS */}
-        <FlexColumn className="p-4">
+        <FlexColumn className="p-4 gap-3">
           <SectionHeadings normalText="for business" boldText="WeFresh" />
-          <p className="w-full max-w-[540px] text-center">
+          <p className="w-full md:max-w-[540px] text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
@@ -29,7 +29,7 @@ const index = () => {
             width="300px"
             height="35px"
           />
-          <ActionButton className="w-[140px] h-[35px]">Send</ActionButton>
+          <ActionButton className="h-[35px]">Send</ActionButton>
         </FlexCenter>
       </FlexColumn>
     </SectionWrapper>

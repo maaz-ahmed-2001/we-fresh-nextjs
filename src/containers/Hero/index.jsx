@@ -103,7 +103,7 @@ const index = () => {
               width="300px"
               placeholder="Enter Phone Number."
             />
-            <ActionButton className="w-[140px] h-[35px]">Send</ActionButton>
+            <ActionButton className="h-[35px]">Send</ActionButton>
           </FlexCenter>
           {/* SOCIAL ICONS */}
           <FlexColumn className="gap-2 !items-start">

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 p {
-  @apply text-gray-400
+  @apply text-gray-400 max-w-[241px] text-sm md:text-[16px]
 }
 
 body {
@@ -17,9 +17,9 @@ body {
 }
 
 h6 {
-  @apply font-medium
+  @apply font-semibold  md:text-base text-sm
 }
 
 .section-heading {
-  @apply text-[42px] text-txt-blue text-center
+  @apply text-[22px] md:text-3xl py-2 lg:text-[42px] text-txt-blue text-center
 }

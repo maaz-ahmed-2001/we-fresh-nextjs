@@ -20,15 +20,15 @@ const index = () => {
     },
   ];
   return (
-      <FlexColumn className="gap-7 p-16 bg-bg-blue">
+      <FlexColumn className="gap-7 py-16 px-4 sm:px-5 lg:px-10 bg-bg-blue">
         {/* MAIN FOOTER */}
-        <FlexCenter className="w-full h-max p-5 !justify-evenly">
+        <FlexCenter className="w-full h-max py-5 md:p-5 gap-5 md:gap-0 !items-start md:!items-center !flex-col md:!flex-row md:!justify-evenly">
           {/* LOGO */}
           <div>
             <WeFreshLogoSvg logoColor="#68BAE3" />
           </div>
           {/* MAPPING THE DESCRIPTIONS */}
-          <FlexCenter className="gap-4 flex-2 p-3">
+          <FlexCenter className="gap-4 flex-2 md:flex-row flex-col md:p-3">
             {data.map((item, i) => {
               return (
                 <FieldDescription
@@ -41,7 +41,7 @@ const index = () => {
           </FlexCenter>
           {/* AVAILABLE ON ICONS */}
           <FlexColumn className="gap-3">
-            <p>Available on</p>
+            <p className="w-full md:w-max" >Available on</p>
             {/* ICONS */}
             <FlexCenter className="gap-3">
               <div className="w-[45px] h-[45px]">
@@ -65,8 +65,8 @@ const index = () => {
 
 export const FieldDescription = ({ title, description }) => {
   return (
-    <FlexColumn className="p-4 gap-4">
-      <h6 className="max-w-[114px] w-full">{title}</h6>
+    <FlexColumn className="md:p-4 py-5 md:py-0 gap-4">
+      <h6 className="md:max-w-[114px] w-full">{title}</h6>
       <p className="w-full max-w-[130px]">{description}</p>
     </FlexColumn>
   );

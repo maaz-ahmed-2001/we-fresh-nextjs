@@ -29,7 +29,7 @@ const index = () => {
               height="35px"
               width="300px"
             />
-            <ActionButton className="w-full max-w-[140px] h-[35px]">
+            <ActionButton className="h-[35px]">
               Search
             </ActionButton>
           </FlexCenter>

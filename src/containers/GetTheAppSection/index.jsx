@@ -15,17 +15,17 @@ const index = () => {
             normalText="Ready to"
             orientation="normal"
           />
-          <p className="w-full max-w-[540px] text-center">
+          <p className="w-full md:max-w-[540px] text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore{" "}
           </p>
         </FlexColumn>
         {/* LINKS */}
-        <FlexCenter className='gap-3' >
-          <div className="h-[55px] w-full max-w-[186px]">
+        <FlexCenter className='gap-3 !flex-col md:!flex-row ' >
+          <div className="h-[55px] w-full max-w-[165px] md:max-w-[186px]">
             <img src="/GetTheAppSection/Apple.png" className="w-full h-full" />
           </div>
-          <div className="h-[55px] w-full max-w-[186px]">
+          <div className="h-[55px] w-full max-w-[165px] md:max-w-[186px]">
             <img src="/GetTheAppSection/Apple.png" className="w-full h-full" />
           </div>
         </FlexCenter>
