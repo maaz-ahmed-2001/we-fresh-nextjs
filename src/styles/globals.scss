@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 p {
-  @apply text-gray-400 max-w-[241px] text-sm md:text-[16px]
+  @apply text-gray-400 w-[241px] text-sm md:text-[16px]
 }
 
 body {
@@ -16,10 +16,18 @@ body {
   overflow-x: hidden;
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
 h6 {
   @apply font-semibold  md:text-base text-sm
 }
 
 .section-heading {
-  @apply text-[22px] md:text-3xl py-2 lg:text-[42px] text-txt-blue text-center
+  @apply text-[22px] flex items-center justify-center  md:text-3xl lg:text-3xl xl:text-[42px] text-txt-blue text-center
 }

@@ -20,7 +20,7 @@ const index = () => {
     },
   ];
   return (
-      <FlexColumn className="gap-7 py-16 px-4 sm:px-5 lg:px-10 bg-bg-blue">
+      <FlexColumn className="gap-7 pt-16 pb-2 px-4 sm:px-5 lg:px-10 bg-bg-blue">
         {/* MAIN FOOTER */}
         <FlexCenter className="w-full h-max py-5 md:p-5 gap-5 md:gap-0 !items-start md:!items-center !flex-col md:!flex-row md:!justify-evenly">
           {/* LOGO */}
@@ -57,7 +57,7 @@ const index = () => {
         <hr className="w-[calc(100%+80px)] bg-border h-[2px]" />
         {/* ALL RIGHT RESERVED DIV */}
         <FlexCenter>
-          <p>© 2020 WeFresh. All Rights Reserved.</p>
+          <p className="!max-w-full" >© 2020 WeFresh. All Rights Reserved.</p>
         </FlexCenter>
       </FlexColumn>
   );
@@ -65,7 +65,7 @@ const index = () => {
 
 export const FieldDescription = ({ title, description }) => {
   return (
-    <FlexColumn className="md:p-4 py-5 md:py-0 gap-4">
+    <FlexColumn className="md:p-4 py-5 md:items-start md:py-0 gap-4">
       <h6 className="md:max-w-[114px] w-full">{title}</h6>
       <p className="w-full max-w-[130px]">{description}</p>
     </FlexColumn>

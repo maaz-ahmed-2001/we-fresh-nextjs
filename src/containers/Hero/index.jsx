@@ -11,10 +11,10 @@ const index = () => {
   const [number, setNumber] = useState();
   return (
     // HERO SECTION
-    <SectionWrapper className="h-[840px] relative flex items-center justify-center overflow-hidden">
+    <SectionWrapper className="flex items-center pt-24 justify-center overflow-hidden">
       {/* SVG'S */}
       {/* THE LEFT BLUE ONE */}
-      <div className="absolute top-[-10%] left-[-10%] -z-10 w-full h-full max-h-[889px] max-w-[1139px]">
+      <div className="absolute lg:rotate-0 rotate-90 scale-[2.2] sm:scale-[2] lg:scale-100 top-[-55%] sm:top-[-45%] lg:top-[0%] left-[-16%] sm:left-[-23%] md:left-[-16%] lg:left-[-22%] xl:left-[-10%] 2xl:left-[0%] -z-10  h-full w-full sm:max-h-[689px] xl:max-h-[889px] xl:max-w-[1139px]">
         <svg
           width="100%"
           height="100%"
@@ -32,7 +32,7 @@ const index = () => {
         </svg>
       </div>
       {/* LIGHT BLUE SVG */}
-      <div className="w-full h-full max-w-[657px] max-h-[492px] absolute -z-20 left-[7%] top-[35%]">
+      <div className="w-full h-full max-w-[557px] xl:max-w-[657px] max-h-[392px] xl:max-h-[492px] absolute -z-20 left-[-15%] sm:left-[-4%] md:left-[8%] lg:left-[3%] xl:left-[8%] 2xl:left-[15%] top-[15%] sm:top-[15%] md:top-[25%] lg:top-[40%] xl:top-[30%] 2xl:top-[33%]">
         <svg
           width="100%"
           height="100%"
@@ -50,7 +50,7 @@ const index = () => {
         </svg>
       </div>
       {/* LIGHT BLUE NAVBAR SVG */}
-      <div className="h-full -z-10 w-full max-w-[732px] max-h-[548px] absolute top-[-26%] left-[52%]">
+      <div className="h-full -z-10 w-full hidden lg:block max-w-[632px] xl:max-w-[732px] max-h-[548px] xl:max-h-[548px] absolute top-[-30%] lg:top-[-34%] xl:top-[-35%] 2xl:top-[-34%] left-[50%] lg:left-[46%] xl:left-[50%]">
         <svg
           width="100%"
           height="100%"
@@ -69,7 +69,7 @@ const index = () => {
       </div>
 
       {/* RIGHT BLUE SVG */}
-      <div className="w-full h-full max-h-[397px] absolute top-[5%] right-[-15%] max-w-[468px] -z-20">
+      <div className="w-full h-full hidden lg:block max-h-[347px] xl:max-h-[397px] absolute lg:top-[2%] xl:top-[3%] 2xl:top-[5%] lg:right-[-20%] xl:right-[-16%] 2xl:right-[-10%] max-w-[418px] xl:max-w-[468px] -z-20">
         <svg
           width="100%"
           height="100%"
@@ -86,10 +86,11 @@ const index = () => {
         </svg>
       </div>
 
-      <FlexCenter className="gap-7 w-full !justify-around">
+      <FlexCenter className="gap-[12rem] lg:gap-7 w-full flex-col lg:flex-row !justify-center lg:!justify-around">
+        {/* LEFT SIDE FORM DIV */}
         <FlexColumn className="p-5 gap-5 !items-start">
           {/* H2 HEADING */}
-          <h2 className="text-[52px] text-white">
+          <h2 className="text-[22px] md:text-3xl lg:text-3xl xl:text-[42px] text-white">
             The smarter way <br />{" "}
             <strong className="w-full max-w-[481px]">to order your food</strong>
           </h2>
@@ -116,10 +117,13 @@ const index = () => {
             </FlexCenter>
           </FlexColumn>
         </FlexColumn>
-        <div className="w-full max-w-[291px] h-[580px] relative">
-          <img src="/iPhone_Black.png" className="h-full w-full" />
+        {/* IMAGE SECTION AREA */}
+        <div className="w-full max-w-[291px]  relative">
+          <div className="h-[319px] sm:h-[580px] block m-auto w-full max-w-[161px] sm:max-w-[291px] " >
+            <img src="/iPhone_Black.png" className="h-full w-full" />
+          </div>
           {/* YELLOW SVG */}
-          <div className="h-[448px] w-[518px] absolute -z-10 bottom-[-5%] left-[-35%]" >
+          <div className="h-[242px] sm:h-[398px] xl:h-[448px] w-[280px] sm:w-[468px] xl:w-[518px] absolute -z-10 bottom-[-5%] sm:bottom-[-4%] lg:bottom-[-5%] xl:bottom-[-10%] left-[4%] sm:left-[-25%] lg:left-[-35%]">
             <svg
               width="100%"
               height="100%"

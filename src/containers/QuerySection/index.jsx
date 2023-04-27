@@ -68,7 +68,7 @@ export default index;
 
 export const InfoBox = ({ heading, paragraph }) => {
   return (
-    <FlexColumn className="w-[280px] sm:w-[380px] gap-3 rounded-md border-border border-2 h-[199px]">
+    <FlexColumn className="w-[280px]  sm:w-[380px] pb-[40px] sm:!justify-end gap-3 rounded-md border-border border-2 h-[199px]">
       <h6 className="">{heading}</h6>
       <p className="max-w-[317px] text-center w-full">{paragraph}</p>
     </FlexColumn>

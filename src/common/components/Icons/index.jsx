@@ -25,7 +25,7 @@ export const YellowCircleSvg = ({ height, width }) => {
     <svg
       width={width || "472"}
       height={height || "411"}
-      className={`absolute -left-[26%] top-[5%] -z-10`}
+      className={`-z-10`}
       viewBox="0 0 472 411"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -68,9 +68,8 @@ export const WeFreshLogoSvg = ({ width, height, logoColor }) => {
 export const FindUsSectionYellowSvg = () => {
   return (
     <svg
-      width="468"
-      className="absolute -bottom-[18%] -left-[14%] -z-10"
-      height="397"
+      width="100%"
+      height="100%"
       viewBox="0 0 468 397"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -89,9 +88,8 @@ export const FindUsSectionYellowSvg = () => {
 export const FindUsSectionBlueSvg = () => {
   return (
     <svg
-      width="521"
-      className="absolute -z-20 -top-[20%] -right-[7%]"
-      height="630"
+      width="100%"
+      height="100%"
       viewBox="0 0 521 630"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
