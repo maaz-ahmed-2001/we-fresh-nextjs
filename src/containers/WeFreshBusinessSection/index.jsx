@@ -9,7 +9,7 @@ import ActionButton from "@/common/components/Button";
 const index = () => {
   const [number, setNumber] = useState();
   return (
-    <SectionWrapper className="h-full max-h-[400px]">
+    <SectionWrapper className="h-full pt-[88px] pb-[103px] max-h-[400px]">
       <FlexColumn className="gap-4">
         {/* DESCRIPTIONS */}
         <FlexColumn className="p-4 gap-3">

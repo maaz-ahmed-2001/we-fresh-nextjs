@@ -6,7 +6,7 @@ import React from "react";
 
 const index = () => {
   return (
-    <SectionWrapper className="h-full bg-bg-blue max-h-[430px] ">
+    <SectionWrapper className="bg-bg-blue pt-[96px] pb-[83px] md:py-[103px]">
       <FlexColumn className="gap-4">
         {/* DESCRIPTION */}
         <FlexColumn className="w-full m-5 gap-2">

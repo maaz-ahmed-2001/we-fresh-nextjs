@@ -57,7 +57,7 @@ const index = () => {
         <hr className="w-[calc(100%+80px)] bg-border h-[2px]" />
         {/* ALL RIGHT RESERVED DIV */}
         <FlexCenter>
-          <p className="!max-w-full" >© 2020 WeFresh. All Rights Reserved.</p>
+          <p className="!w-full !max-w-max" >© 2020 WeFresh. All Rights Reserved.</p>
         </FlexCenter>
       </FlexColumn>
   );

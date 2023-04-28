@@ -20,12 +20,12 @@ export const AppleIconSvg = ({ height, width }) => {
   );
 };
 
-export const YellowCircleSvg = ({ height, width }) => {
+export const YellowCircleSvg = ({ height, width, className }) => {
   return (
     <svg
-      width={width || "472"}
-      height={height || "411"}
-      className={`-z-10`}
+      width="100%"
+      height="100%"
+      className={`-z-10 ${className} `}
       viewBox="0 0 472 411"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -119,6 +119,53 @@ export const OurPartnersSectionBlueSvg = () => {
         clipRule="evenodd"
         d="M303.886 407.63C428.248 386.57 547 233.216 547 122.706C547 12.1951 445.242 0 287.538 0C129.834 0 0 84.4332 0 194.944C0 305.454 179.524 428.69 303.886 407.63Z"
         fill="#96D5F0"
+      />
+    </svg>
+  );
+};
+
+export const ThreeBars = () => {
+  return (
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 15 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="15" height="2" rx="1" fill="white" />
+      <rect y="5" width="15" height="2" rx="1" fill="white" />
+      <rect y="10" width="15" height="2" rx="1" fill="white" />
+    </svg>
+  );
+};
+
+export const CloseIcon = () => {
+  return (
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 15 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="1.84326"
+        y="0.939331"
+        width="18"
+        height="2"
+        rx="1"
+        transform="rotate(45 1.84326 0.939331)"
+        fill="white"
+      />
+      <rect
+        x="14.5713"
+        y="2.35358"
+        width="18"
+        height="2"
+        rx="1"
+        transform="rotate(135 14.5713 2.35358)"
+        fill="white"
       />
     </svg>
   );

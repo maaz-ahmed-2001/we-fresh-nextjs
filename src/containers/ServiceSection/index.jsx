@@ -29,8 +29,8 @@ const index = () => {
   ];
   return (
     <SectionWrapper className="!py-0">
-      <div className="space-y-6 w-full flex gap-32 flex-col py-10">
-        <div className="gap-3  py-5">
+      <div className="sm:space-y-32 w-full py-5 sm:py-10">
+        <div className="gap-3  space-y-5  py-5">
           <SectionHeadings
             className="block m-auto max-w-[428px] w-full h-[70px] text-center"
             boldText="services"
@@ -66,16 +66,22 @@ const index = () => {
           </div>
         </div>
         {/* OUR APP SECTION */}
-        <FlexCenter className="gap-24 flex-col h-[1069px] lg:max-h-[770px] lg: lg:flex-row w-full !justify-center lg:justify-evenly ">
+        <FlexCenter className="gap-8 flex-col pt-14 sm:pt-0 md:h-[1069px] lg:max-h-[770px] lg:flex-row w-full !justify-center lg:justify-evenly ">
           <FlexCenter className="relative h-max">
             <img
               src="/OurAppIcons/iPhone_Black.png"
-              className=" absolute h-[580px] w-[291px] max-w-[291px]"
+              className=" absolute h-[319px] sm:h-[580px] w-full max-w-[161px] sm:max-w-[291px]"
               alt="Iphone Black"
             />
-            <YellowCircleSvg height="444px" width="448px" />
+            <div className="sm:h-[444px] h-[242px] w-[280px] sm:w-[448px] ">
+              <YellowCircleSvg
+                className="w-full h-full"
+                height="444px"
+                width="448px"
+              />
+            </div>
           </FlexCenter>
-          <FlexColumn className="gap-3">
+          <FlexColumn className="gap-3 pt-[17px] sm:!pt-[5px]">
             <AppDetailsComponent
               description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos rerum
         obcaecati vitae aspernatur, fuga, excepturi cupiditate ut necessitatibus
@@ -105,7 +111,7 @@ export default index;
 
 export const AppDetailsComponent = ({ heading, description }) => {
   return (
-    <FlexColumn className="gap-3 group !items-start hover:bg-blue-light relative h-[195px] rounded-lg max-w-[599px] w-full p-4 text-left">
+    <FlexColumn className="gap-3 group !items-start hover:bg-blue-light relative sm:h-[195px] rounded-lg max-w-[599px] w-full p-4 text-left">
       <h6 className="text-txt-blue w-full">{heading}</h6>
       <p className="text-sm !w-full ">{description}</p>
       <div className="absolute h-6 w-6 hidden group-hover:block rounded-bl-md top-[calc(50%-12px)] -left-[12px] rotate-45 bg-blue-light" />

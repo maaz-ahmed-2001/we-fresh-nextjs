@@ -14,7 +14,8 @@ const index = () => {
     <SectionWrapper className="flex items-center pt-24 justify-center overflow-hidden">
       {/* SVG'S */}
       {/* THE LEFT BLUE ONE */}
-      <div className="absolute lg:rotate-0 rotate-90 scale-[2.2] sm:scale-[2] lg:scale-100 top-[-55%] sm:top-[-45%] lg:top-[0%] left-[-16%] sm:left-[-23%] md:left-[-16%] lg:left-[-22%] xl:left-[-10%] 2xl:left-[0%] -z-10  h-full w-full sm:max-h-[689px] xl:max-h-[889px] xl:max-w-[1139px]">
+      {/* FOR WIDTH GREATER THAN 640PX */}
+      <div className="absolute lg:rotate-0 rotate-90 scale-[2.2] sm:scale-[2] lg:scale-100 top-[-25%] sm:top-[-48%] lg:top-[0%] left-[-20%] sm:left-[-23%] md:left-[-16%] lg:left-[-22%] xl:left-[-10%] 2xl:left-[0%] -z-10  sm:h-full w-full h-[397px] sm:max-h-[689px] xl:max-h-[889px] xl:max-w-[1139px]">
         <svg
           width="100%"
           height="100%"
@@ -86,9 +87,9 @@ const index = () => {
         </svg>
       </div>
 
-      <FlexCenter className="gap-[12rem] lg:gap-7 w-full flex-col lg:flex-row !justify-center lg:!justify-around">
+      <FlexCenter className="gap-[5rem] sm:gap-[10rem] lg:gap-7 w-full flex-col lg:flex-row !justify-center lg:!justify-around">
         {/* LEFT SIDE FORM DIV */}
-        <FlexColumn className="p-5 gap-5 !items-start">
+        <FlexColumn className="p-7 lg:p-5 gap-5  lg:!items-start">
           {/* H2 HEADING */}
           <h2 className="text-[22px] md:text-3xl lg:text-3xl xl:text-[42px] text-white">
             The smarter way <br />{" "}
@@ -107,8 +108,8 @@ const index = () => {
             <ActionButton className="h-[35px]">Send</ActionButton>
           </FlexCenter>
           {/* SOCIAL ICONS */}
-          <FlexColumn className="gap-2 !items-start">
-            <p className="text-white">Available on</p>
+          <FlexColumn className="gap-2 lg:!items-start">
+            <p className="text-white !w-fit lg:w-full">Available on</p>
             <FlexCenter className="!items-start gap-5">
               <AppleIconSvg height="45px" width="45px" />
               <div className="h-[45px] w-[45px]">
@@ -119,7 +120,7 @@ const index = () => {
         </FlexColumn>
         {/* IMAGE SECTION AREA */}
         <div className="w-full max-w-[291px]  relative">
-          <div className="h-[319px] sm:h-[580px] block m-auto w-full max-w-[161px] sm:max-w-[291px] " >
+          <div className="h-[319px] sm:h-[580px] block m-auto w-full max-w-[161px] sm:max-w-[291px] ">
             <img src="/iPhone_Black.png" className="h-full w-full" />
           </div>
           {/* YELLOW SVG */}
