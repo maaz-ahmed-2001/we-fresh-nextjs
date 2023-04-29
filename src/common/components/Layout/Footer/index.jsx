@@ -45,10 +45,10 @@ const index = () => {
             {/* ICONS */}
             <FlexCenter className="gap-3">
               <div className="w-[45px] h-[45px]">
-                <img className="w-full h-full" src="/Apple.png" />
+                <img className="w-full h-full" src="/HeroSectionPng/Apple.png" />
               </div>
               <div className="w-[45px] h-[45px]">
-                <img className="w-full h-full" src="/Googleplay.png" />
+                <img className="w-full h-full" src="/HeroSectionPng/Googleplay.png" />
               </div>
             </FlexCenter>
           </FlexColumn>
