@@ -90,9 +90,10 @@ const index = () => {
         {/* LEFT SIDE FORM DIV */}
         <FlexColumn className="p-7 lg:p-5 gap-5  lg:!items-start">
           {/* H2 HEADING */}
-          <h2 className="text-[22px] md:text-3xl lg:text-3xl xl:text-[42px] text-white">
-            The smarter way <br />{" "}
-            <strong className="w-full max-w-[481px]">to order your food</strong>
+          <h2 className="text-[22px] mb-2 md:text-3xl lg:text-3xl xl:text-[42px] text-white">
+            The smarter way
+            <br />
+            <strong className="w-full md:pt-[10px] block max-w-[481px]">to order your food</strong>
           </h2>
           {/* FORM DIV */}
           <FlexCenter className="gap-3">
