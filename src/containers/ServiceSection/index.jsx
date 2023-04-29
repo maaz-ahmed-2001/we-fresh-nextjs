@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ServicesWrapper from "@/common/components/ServicesWrapper";
 import { SectionHeadings } from "@/common/components/Headings";
 import FlexCenter from "@/common/components/FlexCenter";
@@ -7,30 +7,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import FlexColumn from "@/common/components/FlexColumn";
 import SectionWrapper from "@/common/components/SectionWrapper";
+import { links } from "./data/Data";
 
 const index = () => {
-  const links = [
-    {
-      url: "/ServiceIcons/Cafe.png",
-      text: "Cafe",
-    },
-    {
-      url: "/ServiceIcons/Cafe.png",
-      text: "Cafe",
-    },
-    {
-      url: "/ServiceIcons/Cafe.png",
-      text: "Cafe",
-    },
-    {
-      url: "/ServiceIcons/Cafe.png",
-      text: "Cafe",
-    },
-  ];
+  const [activeSlideNumber, setActiveSlideNumber] = useState(0);
+
+  const handleSwipeChange = (swiper) => {
+    const { activeIndex, slides } = swiper;
+    setActiveSlideNumber(slides[activeIndex].getAttribute("data-id"));
+  };
+
   return (
     <SectionWrapper className="!py-0">
       <div className="sm:space-y-32 w-full py-5 sm:py-10">
-        <div className="gap-3  space-y-5  py-5">
+        <div className="gap-3 space-y-5 lg:space-y-10 py-5">
           <SectionHeadings
             className="block m-auto max-w-[428px] w-full h-[70px] text-center"
             boldText="services"
@@ -40,25 +30,31 @@ const index = () => {
           <div className="mb-10">
             <Swiper
               className="bg-[#F2F2F2]"
-              spaceBetween={25}
-              slidesPerView={1}
+              spaceBetween={50}
+              effect="fade"
+              slidesPerView={1.7}
               loop={true}
               breakpoints={{
                 640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
+                  slidesPerView: 2.7,
+                },
+                768: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 4,
                 },
               }}
-              onSlideChange={() => console.log("slide change")}
-              onSwiper={(swiper) => console.log(swiper)}
+              onSlideChange={(swiper) => handleSwipeChange(swiper)}
             >
-              {links.map((item, i) => {
+              {links?.map((item, i) => {
                 return (
                   <SwiperSlide
-                    className="max-w-[186px] bg-white w-full"
+                    className="bg-white h-[220px] w-[186px]"
                     key={i}
+                    data-id={i}
                   >
-                    <ServicesWrapper src={item.url} text={item.text} />
+                    <ServicesWrapper src={item.url} text={item.text + i} />
                   </SwiperSlide>
                 );
               })}
@@ -81,25 +77,15 @@ const index = () => {
               />
             </div>
           </FlexCenter>
-          <FlexColumn className="gap-3 pt-[17px] sm:!pt-[5px]">
-            <AppDetailsComponent
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos rerum
-        obcaecati vitae aspernatur, fuga, excepturi cupiditate ut necessitatibus
-        voluptatem dolorem possimus ipsa harum odio commodi?"
-              heading="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            />
-            <AppDetailsComponent
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos rerum
-        obcaecati vitae aspernatur, fuga, excepturi cupiditate ut necessitatibus
-        voluptatem dolorem possimus ipsa harum odio commodi?"
-              heading="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            />
-            <AppDetailsComponent
-              description="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos rerum
-        obcaecati vitae aspernatur, fuga, excepturi cupiditate ut necessitatibus
-        voluptatem dolorem possimus ipsa harum odio commodi?"
-              heading="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            />
+          <FlexColumn className="gap-3 pt-[17px] sm:!pt-[5px] sm:mt-7">
+            {links[activeSlideNumber]?.data?.map((item, i) => {
+              return (
+                <AppDetailsComponent
+                  description={item?.description}
+                  heading={item?.heading}
+                />
+              );
+            })}
           </FlexColumn>
         </FlexCenter>
       </div>
@@ -114,7 +100,7 @@ export const AppDetailsComponent = ({ heading, description }) => {
     <FlexColumn className="gap-3 group !items-start hover:bg-blue-light relative sm:h-[195px] rounded-lg max-w-[599px] w-full p-4 text-left">
       <h6 className="text-txt-blue w-full">{heading}</h6>
       <p className="text-sm !w-full ">{description}</p>
-      <div className="absolute h-6 w-6 hidden group-hover:block rounded-bl-md top-[calc(50%-12px)] -left-[12px] rotate-45 bg-blue-light" />
+      <div className="absolute h-6 w-6 hidden sm:group-hover:block rounded-bl-md top-[calc(50%-12px)] -left-[12px] rotate-45 bg-blue-light" />
     </FlexColumn>
   );
 };

@@ -14,7 +14,6 @@ const index = () => {
     <SectionWrapper className="flex items-center pt-24 justify-center overflow-hidden">
       {/* SVG'S */}
       {/* THE LEFT BLUE ONE */}
-      {/* FOR WIDTH GREATER THAN 640PX */}
       <div className="absolute lg:rotate-0 rotate-90 scale-[2.2] sm:scale-[2] lg:scale-100 top-[-25%] sm:top-[-48%] lg:top-[0%] left-[-20%] sm:left-[-23%] md:left-[-16%] lg:left-[-22%] xl:left-[-10%] 2xl:left-[0%] -z-10  sm:h-full w-full h-[397px] sm:max-h-[689px] xl:max-h-[889px] xl:max-w-[1139px]">
         <svg
           width="100%"
@@ -113,7 +112,10 @@ const index = () => {
             <FlexCenter className="!items-start gap-5">
               <AppleIconSvg height="45px" width="45px" />
               <div className="h-[45px] w-[45px]">
-                <img src="/Googleplay.png" className="w-full h-full" />
+                <img
+                  src="/HeroSectionPng/Googleplay.png"
+                  className="w-full h-full"
+                />
               </div>
             </FlexCenter>
           </FlexColumn>
@@ -121,7 +123,10 @@ const index = () => {
         {/* IMAGE SECTION AREA */}
         <div className="w-full max-w-[291px]  relative">
           <div className="h-[319px] sm:h-[580px] block m-auto w-full max-w-[161px] sm:max-w-[291px] ">
-            <img src="/iPhone_Black.png" className="h-full w-full" />
+            <img
+              src="/HeroSectionPng/iPhone_Black.png"
+              className="h-full w-full"
+            />
           </div>
           {/* YELLOW SVG */}
           <div className="h-[242px] sm:h-[398px] xl:h-[448px] w-[280px] sm:w-[468px] xl:w-[518px] absolute -z-10 bottom-[-5%] sm:bottom-[-4%] lg:bottom-[-5%] xl:bottom-[-10%] left-[4%] sm:left-[-25%] lg:left-[-35%]">

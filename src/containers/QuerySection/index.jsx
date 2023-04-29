@@ -38,7 +38,7 @@ const index = () => {
     },
   ];
   return (
-    <SectionWrapper className="h-full max-h-[1375px]">
+    <SectionWrapper className="h-full px-0 max-h-[1375px]">
       <FlexColumn className="gap-5 py-2">
         <SubHeading text="Got Questions?" className="" />
         <p className="max-w-[294px] w-full text-center">
@@ -60,7 +60,7 @@ const index = () => {
           })}
         </FlexColumn>
         {/* STILL HAVE A QUESTION DIV */}
-        <FlexColumn className="gap-6 py-3 w-full h-max ">
+        <FlexColumn className="gap-6 py-3 w-[90%] sm:w-full h-max ">
           <SubHeading text="Still have a question?" />
           <p className="max-w-[704px] w-full text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

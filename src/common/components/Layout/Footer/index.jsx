@@ -22,13 +22,13 @@ const index = () => {
   return (
       <FlexColumn className="gap-7 pt-16 pb-2 px-4 sm:px-5 lg:px-10 bg-bg-blue">
         {/* MAIN FOOTER */}
-        <FlexCenter className="w-full h-max py-5 md:p-5 gap-5 md:gap-0 !items-start md:!items-center !flex-col md:!flex-row md:!justify-evenly">
+        <FlexCenter className="w-full h-max py-5 !items-start md:p-5 gap-5 md:gap-0 !flex-col md:!flex-row md:!justify-evenly">
           {/* LOGO */}
           <div>
             <WeFreshLogoSvg logoColor="#68BAE3" />
           </div>
           {/* MAPPING THE DESCRIPTIONS */}
-          <FlexCenter className="gap-4 flex-2 md:flex-row flex-col md:p-3">
+          <FlexCenter className="gap-4 flex-2 md:flex-row flex-col md:px-3">
             {data.map((item, i) => {
               return (
                 <FieldDescription
@@ -40,7 +40,7 @@ const index = () => {
             })}
           </FlexCenter>
           {/* AVAILABLE ON ICONS */}
-          <FlexColumn className="gap-3">
+          <FlexColumn className="gap-3 !justify-start">
             <p className="w-full md:w-max" >Available on</p>
             {/* ICONS */}
             <FlexCenter className="gap-3">

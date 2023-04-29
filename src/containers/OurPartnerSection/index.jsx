@@ -33,7 +33,7 @@ const index = () => {
         </FlexCenter>
         {/* ABSOLUTE IMAGES */}
         <FlexCenter className="w-[100%] h-[300px] md:h-[400px] xl:h-[500px] ">
-          <FlexCenter className="relative h-full w-[70%] sm:w-[60%] lg:w-[100%]">
+          <FlexCenter className="relative h-full w-[100%] sm:w-[60%] lg:w-[100%]">
             {/* TOP_LEFT CIRCLE */}
             <div className="h-[91px] md:h-[130px] xl:h-[175px] absolute top-[0%] left-[5%] w-[91px] md:w-[130px] xl:w-[175px]">
               <img
@@ -44,28 +44,28 @@ const index = () => {
             {/* CENTRAL CIRCLE */}
             <div className="h-[91px] md:h-[130px] xl:h-[175px] absolute">
               <img
-                src="/OurPartnersSection/7-Eleven.png"
+                src="/OurPartnersSection/TrueCoffee.png"
                 className="h-full w-full"
               />
             </div>
             {/* BOTTOM RIGHT CIRCLE */}
             <div className="h-[91px] md:h-[130px] xl:h-[175px] absolute bottom-[0%] right-[5%] w-[91px] md:w-[130px] xl:w-[175px]">
               <img
-                src="/OurPartnersSection/7-Eleven.png"
+                src="/OurPartnersSection/CpFreshmart.png"
                 className="h-full w-full"
               />
             </div>
             {/* BOTTOM LEFT CIRCLE */}
             <div className="h-[91px] md:h-[130px] xl:h-[175px] absolute bottom-[10%]  left-[10%] w-[91px] md:w-[130px] xl:w-[175px]">
               <img
-                src="/OurPartnersSection/7-Eleven.png"
+                src="/OurPartnersSection/Makro.png"
                 className="h-full w-full"
               />
             </div>
             {/* TOP_RIGHT CIRCLE */}
             <div className="h-[91px] md:h-[130px] xl:h-[175px] absolute top-[10%] right-[10%] ">
               <img
-                src="/OurPartnersSection/7-Eleven.png"
+                src="/OurPartnersSection/TrueYou.png"
                 className="h-full w-full"
               />
             </div>

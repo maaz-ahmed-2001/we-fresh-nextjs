@@ -8,13 +8,42 @@ import ActionButton from "../../Button";
 const links = ["Our App", "For Business", "About us", "English"];
 
 const index = () => {
-  const [isShown, setisShown] = useState(false);
-  useEffect(() => {}, [isShown]);
+  const [isShown, setIsShown] = useState(false);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!isShown) {
+      document.querySelector("body").classList.remove("overflow-hidden");
+    } else {
+      document.querySelector("body").classList.add("overflow-hidden");
+    }
+  }, [isShown]);
+
+  useEffect(() => {
+    const checkWidth = () => {
+      if (width > 767) {
+        setIsShown(false);
+      } else {
+        null;
+      }
+    };
+    checkWidth();
+  }, [width]);
+
   return (
     <>
-      <header className="absolute w-full z-20 top-0 left-0  pt-5">
-        <SectionWrapper className="!p-0">
-          <nav className="flex items-center px-5 md:px-0 justify-between md:justify-around">
+      <header className="absolute w-full top-0 left-0  pt-5">
+        <SectionWrapper zIndex="30" className="!p-0">
+          <nav className="flex items-center z-30 px-5 md:px-0 justify-between md:justify-around">
             {/* LOGO */}
             <svg
               width="107"
@@ -38,22 +67,21 @@ const index = () => {
             </svg>
             {/* LINKS  */}
             <ul className="md:flex gap-8 hidden">
-              <li>Our App</li>
-              <li>For Business</li>
-              <li>About Us</li>
-              <li>English</li>
+              {links?.map((item, i) => {
+                return <li key={i}>{item}</li>;
+              })}
             </ul>
             {/* TOGGLE BUTTON */}
             {isShown ? (
               <div
-                onClick={() => setisShown(false)}
+                onClick={() => setIsShown(false)}
                 className="w-5 h-5 mr-3 block md:hidden"
               >
                 <CloseIcon />
               </div>
             ) : (
               <div
-                onClick={() => setisShown(true)}
+                onClick={() => setIsShown(true)}
                 className="w-5 h-5 mr-3 block md:hidden"
               >
                 <ThreeBars />
@@ -61,8 +89,8 @@ const index = () => {
             )}
           </nav>
         </SectionWrapper>
+        <NavbarSmall isShown={isShown} />
       </header>
-      <NavbarSmall isShown={isShown} />
     </>
   );
 };
@@ -71,24 +99,37 @@ export default index;
 
 export const NavbarSmall = ({ isShown }) => {
   return (
-    isShown && (
-      <FlexColumn className="z-10 px-5 transition-opacity absolute pt-[15vh] !items-start gap-5 !justify-start top-0 right-0 bg-navbar-bg h-screen w-full ">
-        <div className="w-full">
-          <div className="divide-y h-[1px] mb-4 bg-light-grey w-full" />
-          {links.map((link, i) => {
-            return (
-              <div
-                key={i}
-                className="flex text-white font-normal items-start flex-col gap-3 mb-5 justify-center"
-              >
-                <div>{link}</div>
-                <div className="divide-y h-[1px] w-full bg-light-grey " />
-              </div>
-            );
-          })}
-        </div>
-        <ActionButton className="!w-full">Sign up</ActionButton>
-      </FlexColumn>
-    )
+    <FlexColumn
+      className={`px-5 z-20 -translate-y-full transition-transform ${
+        isShown && "translate-y-0"
+      }  transition-opacity absolute pt-[15vh] !items-start gap-5 !justify-start top-0 right-0 bg-navbar-bg h-screen w-full`}
+    >
+      <div
+        className={` ${
+          isShown ? "opacity-100" : "opacity-0"
+        } transition-opacity delay-150 w-full`}
+      >
+        <div className="divide-y h-[1px] mb-4 bg-light-grey w-full" />
+        {links.map((link, i) => {
+          return (
+            <div
+              key={i}
+              className="flex text-white font-normal items-start flex-col gap-3 mb-5 justify-center"
+            >
+              <div>{link}</div>
+              {/* DIVIDER */}
+              <div className="divide-y h-[1px] w-full bg-light-grey " />
+            </div>
+          );
+        })}
+      </div>
+      <ActionButton
+        className={` ${
+          isShown ? "opacity-100" : "opacity-0"
+        } transition-opacity delay-300 !w-full`}
+      >
+        Sign up
+      </ActionButton>
+    </FlexColumn>
   );
 };
