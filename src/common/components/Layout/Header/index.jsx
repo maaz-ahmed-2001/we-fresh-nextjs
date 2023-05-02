@@ -4,21 +4,13 @@ import SectionWrapper from "../../SectionWrapper";
 import FlexColumn from "../../FlexColumn";
 import { CloseIcon, ThreeBars } from "../../Icons";
 import ActionButton from "../../Button";
+import { useMediaQuery } from "@/hooks/UseMediaQuery";
 
 const links = ["Our App", "For Business", "About us", "English"];
 
 const index = () => {
   const [isShown, setIsShown] = useState(false);
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    function handleResize() {
-      setWidth(window.innerWidth);
-    }
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isTablet = useMediaQuery("(max-width: 768px)");
 
   useEffect(() => {
     if (!isShown) {
@@ -30,14 +22,14 @@ const index = () => {
 
   useEffect(() => {
     const checkWidth = () => {
-      if (width > 767) {
+      if (!isTablet) {
         setIsShown(false);
       } else {
         null;
       }
     };
     checkWidth();
-  }, [width]);
+  }, [isTablet]);
 
   return (
     <>

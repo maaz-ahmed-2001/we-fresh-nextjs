@@ -46,7 +46,7 @@ export const links = [
   },
   {
     url: "/ServiceIcons/Cafe.png",
-    text: "Third",
+    text: "Cafe",
     data: [
       {
         heading: "heading of Cafe",
@@ -70,7 +70,7 @@ export const links = [
   },
   {
     url: "/ServiceIcons/Food.png",
-    text: "Fourth",
+    text: "Food",
     data: [
       {
         heading: "heading of Food",

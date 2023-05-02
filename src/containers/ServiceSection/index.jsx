@@ -17,8 +17,13 @@ const index = () => {
     setActiveSlideNumber(slides[activeIndex].getAttribute("data-id"));
   };
 
+  const handleTouchChange = (dataId) => {
+    setActiveSlideNumber(dataId)
+  };
+
+
   return (
-    <SectionWrapper className="!py-0">
+    <SectionWrapper className="!p-0">
       <div className="sm:space-y-32 w-full py-5 sm:py-10">
         <div className="gap-3 space-y-5 lg:space-y-10 py-5">
           <SectionHeadings
@@ -29,9 +34,8 @@ const index = () => {
           />
           <div className="mb-10">
             <Swiper
-              className="bg-[#F2F2F2]"
+              className="bg-[#F2F2F2] lg:bg-white"
               spaceBetween={50}
-              effect="fade"
               slidesPerView={1.7}
               loop={true}
               breakpoints={{
@@ -54,7 +58,7 @@ const index = () => {
                     key={i}
                     data-id={i}
                   >
-                    <ServicesWrapper src={item.url} text={item.text + i} />
+                    <ServicesWrapper src={item.url} dataId={i} onClickFunc={handleTouchChange} text={item.text} />
                   </SwiperSlide>
                 );
               })}
@@ -97,10 +101,10 @@ export default index;
 
 export const AppDetailsComponent = ({ heading, description }) => {
   return (
-    <FlexColumn className="gap-3 group !items-start hover:bg-blue-light relative sm:h-[195px] rounded-lg max-w-[599px] w-full p-4 text-left">
+    <FlexColumn className="gap-3 group !items-start transition-colors hover:bg-blue-light relative sm:h-[195px] rounded-lg max-w-[599px] w-full p-4 text-left">
       <h6 className="text-txt-blue w-full">{heading}</h6>
       <p className="text-sm !w-full ">{description}</p>
-      <div className="absolute h-6 w-6 hidden sm:group-hover:block rounded-bl-md top-[calc(50%-12px)] -left-[12px] rotate-45 bg-blue-light" />
+      <div className="absolute h-6 w-6 hidden sm:group-hover:block transition-colors rounded-bl-md top-[calc(50%-12px)] -left-[12px] rotate-45 bg-blue-light" />
     </FlexColumn>
   );
 };
