@@ -1,12 +1,12 @@
-import FlexCenter from "@/common/components/FlexCenter";
-import FlexColumn from "@/common/components/FlexColumn";
-import { SectionHeadings } from "@/common/components/Headings";
-import SectionWrapper from "@/common/components/SectionWrapper";
+import FlexCenter from "../../common/components/FlexCenter";
+import FlexColumn from "../../common/components/FlexColumn";
+import { SectionHeadings } from "../../common/components/Headings";
+import SectionWrapper from "../../common/components/SectionWrapper";
 import React from "react";
 
 const index = () => {
   return (
-    <SectionWrapper className="bg-bg-blue pt-[96px] pb-[83px] md:py-[103px]">
+    <SectionWrapper className="bg-bg-blue pt-[96px] !max-w-full pb-[83px] md:py-[103px]">
       <FlexColumn className="gap-4">
         {/* DESCRIPTION */}
         <FlexColumn className="w-full m-5 gap-2">

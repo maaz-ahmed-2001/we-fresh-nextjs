@@ -1,17 +1,22 @@
-import FlexCenter from "@/common/components/FlexCenter";
-import { SectionHeadings } from "@/common/components/Headings";
+import FlexCenter from "../../common/components/FlexCenter";
+import { SectionHeadings } from "../../common/components/Headings";
 import React, { useState } from "react";
-import TextInput from "@/common/components/Input";
-import ActionButton from "@/common/components/Button";
-import SectionWrapper from "@/common/components/SectionWrapper";
+import TextInput from "../../common/components/Input";
+import ActionButton from "../../common/components/Button";
 import {
   FindUsSectionBlueSvg,
   FindUsSectionYellowSvg,
-  YellowCircleSvg,
-} from "@/common/components/Icons";
+} from "../../common/components/Icons";
+import SectionWrapper from "../../common/components/SectionWrapper";
 
 const index = () => {
-  const [area, setArea] = useState("");
+  const [area, setArea] = useState<string>();
+
+  const handleChange = (event:React.ChangeEvent<HTMLInputElement> ): void  => {
+    setArea(event.target.value)
+  }
+
+
   return (
     // WRAPPER
     <SectionWrapper className="h-full md:max-h-[702px] lg:pt-[154px] lg:pb-[135px] !flex items-center overflow-hidden justify-center">
@@ -27,9 +32,9 @@ const index = () => {
           <FlexCenter className="gap-3 justify-center md:!justify-start ">
             <TextInput
               placeholder="Enter your area"
-              type="text"
+              type=""
               state={area}
-              setState={setArea}
+              onChangeFunc={handleChange}
               height="35px"
             />
             <ActionButton className="h-[35px]">Search</ActionButton>

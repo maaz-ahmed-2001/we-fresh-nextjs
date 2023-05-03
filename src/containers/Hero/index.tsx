@@ -1,14 +1,17 @@
-import Container from "@/common/components/Container";
 import React, { useState } from "react";
-import InputComponent from "@/common/components/Input";
-import ActionButton from "@/common/components/Button";
-import { AppleIconSvg } from "@/common/components/Icons";
-import SectionWrapper from "@/common/components/SectionWrapper";
-import FlexCenter from "@/common/components/FlexCenter";
-import FlexColumn from "@/common/components/FlexColumn";
+import InputComponent from "../../common/components/Input";
+import ActionButton from "../../common/components/Button";
+import { AppleIconSvg } from "../../common/components/Icons";
+import SectionWrapper from "../../common/components/SectionWrapper";
+import FlexCenter from "../../common/components/FlexCenter";
+import FlexColumn from "../../common/components/FlexColumn";
 
 const index = () => {
-  const [number, setNumber] = useState();
+  const [number, setNumber] = useState<number>();
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    setNumber(Number(event.target.value))
+  }
+
   return (
     // HERO SECTION
     <SectionWrapper className="flex items-center pt-24 justify-center overflow-hidden">
@@ -100,7 +103,7 @@ const index = () => {
             <InputComponent
               type="number"
               state={number}
-              setState={setNumber}
+              onChangeFunc={handleChange}
               height="35px"
               width="300px"
               placeholder="Enter Phone Number."

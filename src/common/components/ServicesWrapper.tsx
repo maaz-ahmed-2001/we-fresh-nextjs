@@ -1,9 +1,13 @@
 import React from "react";
 
-const ServicesWrapper = ({ src, text, onClickFunc, dataId }) => {
+type ServicesWrapperProps = {
+  src: string
+  text: string
+}
+
+const ServicesWrapper = ({ src, text }: ServicesWrapperProps) => {
   return (
     <div
-      onClick={()=> onClickFunc(dataId)}
       className={`p-3 flex-col flex gap-3 transition-transform duration-200 items-center justify-center rounded-md group hover:scale-105`}
     >
       <div className="max-w-[120px] w-full h-[120px]">

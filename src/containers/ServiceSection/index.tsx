@@ -1,23 +1,22 @@
 import React, { useState } from "react";
-import ServicesWrapper from "@/common/components/ServicesWrapper";
-import { SectionHeadings } from "@/common/components/Headings";
-import FlexCenter from "@/common/components/FlexCenter";
-import { YellowCircleSvg } from "@/common/components/Icons";
+import ServicesWrapper from "../../common/components/ServicesWrapper";
+import { SectionHeadings } from "../../common/components/Headings";
+import FlexCenter from "../../common/components/FlexCenter";
+import { YellowCircleSvg } from "../../common/components/Icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import FlexColumn from "@/common/components/FlexColumn";
-import SectionWrapper from "@/common/components/SectionWrapper";
+import FlexColumn from "../../common/components/FlexColumn";
+import SectionWrapper from "../../common/components/SectionWrapper";
 import { links } from "./data/Data";
 
 const index = () => {
   const [activeSlideNumber, setActiveSlideNumber] = useState(0);
 
-  const handleSwipeChange = (swiper) => {
-    const { activeIndex, slides } = swiper;
-    setActiveSlideNumber(slides[activeIndex].getAttribute("data-id"));
+  const handleSwipeChange = (activeIndex: number, slides: HTMLElement[]) => {
+    setActiveSlideNumber(activeIndex);
   };
 
-  const handleTouchChange = (dataId) => {
+  const handleTouchChange = (dataId: number) => {
     setActiveSlideNumber(dataId)
   };
 
@@ -49,16 +48,19 @@ const index = () => {
                   slidesPerView: 4,
                 },
               }}
-              onSlideChange={(swiper) => handleSwipeChange(swiper)}
+              onSlideChange={(swiper) => {
+                let { activeIndex, slides } = swiper
+                handleSwipeChange(activeIndex, slides)
+              }}
             >
               {links?.map((item, i) => {
                 return (
                   <SwiperSlide
                     className="bg-white h-[220px] w-[186px]"
                     key={i}
-                    data-id={i}
+                    onClick={() => handleTouchChange(i)}
                   >
-                    <ServicesWrapper src={item.url} dataId={i} onClickFunc={handleTouchChange} text={item.text} />
+                    <ServicesWrapper src={item.url} text={item.text} />
                   </SwiperSlide>
                 );
               })}
@@ -82,11 +84,11 @@ const index = () => {
             </div>
           </FlexCenter>
           <FlexColumn className="gap-3 pt-[17px] sm:!pt-[5px] sm:mt-7">
-            {links[activeSlideNumber]?.data?.map((item, i) => {
+            {links[activeSlideNumber].data.map((item, i) => {
               return (
                 <AppDetailsComponent
-                  description={item?.description}
-                  heading={item?.heading}
+                  description={item.description}
+                  heading={item.heading}
                 />
               );
             })}
@@ -99,7 +101,13 @@ const index = () => {
 
 export default index;
 
-export const AppDetailsComponent = ({ heading, description }) => {
+type AppDetailsComponentProps = {
+  heading: string
+  description: string
+}
+
+
+export const AppDetailsComponent = ({ heading, description }: AppDetailsComponentProps) => {
   return (
     <FlexColumn className="gap-3 group !items-start transition-colors hover:bg-blue-light relative sm:h-[195px] rounded-lg max-w-[599px] w-full p-4 text-left">
       <h6 className="text-txt-blue w-full">{heading}</h6>

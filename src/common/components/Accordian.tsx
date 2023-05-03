@@ -2,19 +2,26 @@ import { useMediaQuery } from "../../hooks/UseMediaQuery";
 import { useEffect, useRef, useState } from "react";
 import React from "react";
 
-export const Accordian = ({ paragraph, heading, toggleFunc, id, isOpen }) => {
-  const [panelHeight, setPanelHeight] = useState(0);
-  const paragraphRef = useRef();
-  const headingRef = useRef();
+type AccordianProps = {
+  paragraph: string
+  heading: string
+  id: number | string
+  isOpen: boolean
+  toggleFunc: (id : number) => void
+}
+
+
+export const Accordian = ({ paragraph, heading, toggleFunc, id, isOpen }: AccordianProps) => {
+  const [panelHeight, setPanelHeight] = useState<number>(0);
+  const paragraphRef = useRef<HTMLParagraphElement|null>(null);
+  const headingRef = useRef<HTMLHeadingElement | null>(null);
   const isTablet = useMediaQuery("(max-width: 640px)");
-  const paraRef = useRef();
-  console.log(panelHeight);
 
   useEffect(() => {
     if (isOpen) {
-      setPanelHeight(
-        headingRef?.current?.scrollHeight + paragraphRef?.current?.scrollHeight
-      );
+      const headingHeight = headingRef.current?.clientHeight || 0;
+      const paragraphHeight = paragraphRef.current?.clientHeight || 0;
+      setPanelHeight(headingHeight + paragraphHeight);
     } else {
       setPanelHeight(0);
     }
@@ -32,12 +39,11 @@ export const Accordian = ({ paragraph, heading, toggleFunc, id, isOpen }) => {
     >
       <div
         className={`w-full p-[20px] md:px-[41px] transition-all border-b-2 sm:border-2 sm:rounded-md border-b-border sm:border-border `}
-        onClick={() => toggleFunc(id)}
+        onClick={() => toggleFunc(Number(id))}
       >
         <h6>{heading}</h6>
       </div>
       <div
-        ref={paraRef}
         style={{
           marginTop: isOpen ? (isTablet ? "" : "12px") : "0px",
           padding: isOpen
@@ -45,8 +51,8 @@ export const Accordian = ({ paragraph, heading, toggleFunc, id, isOpen }) => {
               ? "14px 59px 15px 20px"
               : "20px 60px 28px 41px"
             : isTablet
-            ? "0px 20px"
-            : "0px 41px",
+              ? "0px 20px"
+              : "0px 41px",
           border: isOpen ? "" : "0px",
           height: isOpen
             ? isTablet
@@ -54,9 +60,8 @@ export const Accordian = ({ paragraph, heading, toggleFunc, id, isOpen }) => {
               : `${panelHeight + 12 + 48}px`
             : "0px",
         }}
-        className={`w-full flex items-start justify-center transition-all border-b-2 sm:border-2 gap-[14px] md:gap-[12px] sm:rounded-md ${
-          isOpen && "md:border-txt-blue"
-        } border-b-border sm:border-border flex-col overflow-hidden`}
+        className={`w-full flex items-start justify-center transition-all border-b-2 sm:border-2 gap-[14px] md:gap-[12px] sm:rounded-md ${isOpen && "md:border-txt-blue"
+          } border-b-border sm:border-border flex-col overflow-hidden`}
       >
         <h6 ref={headingRef} className={`${isOpen && "text-txt-blue"}`}>
           {heading}

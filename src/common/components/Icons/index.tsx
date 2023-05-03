@@ -1,6 +1,13 @@
 import styles from "./styles.module.scss";
 
-export const AppleIconSvg = ({ height, width }) => {
+type HeightWidths = {
+  height?: string
+  width?: string
+}
+
+type AppleIconSvgProps = HeightWidths
+
+export const AppleIconSvg = ({ height, width }: AppleIconSvgProps) => {
   return (
     <svg
       width={width || "45"}
@@ -20,7 +27,11 @@ export const AppleIconSvg = ({ height, width }) => {
   );
 };
 
-export const YellowCircleSvg = ({ height, width, className }) => {
+type YellowCircleSvgProps =  {
+  className : string
+} & HeightWidths
+
+export const YellowCircleSvg = ({ height, width, className } : YellowCircleSvgProps  ) => {
   return (
     <svg
       width="100%"
@@ -41,7 +52,11 @@ export const YellowCircleSvg = ({ height, width, className }) => {
   );
 };
 
-export const WeFreshLogoSvg = ({ width, height, logoColor }) => {
+type WeFreshLogoSvgProps = {
+  logoColor : string
+} & HeightWidths
+
+export const WeFreshLogoSvg = ({ width, height, logoColor } : WeFreshLogoSvgProps ) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

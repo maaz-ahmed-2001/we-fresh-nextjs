@@ -2,7 +2,11 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const index = ({ children }) => {
+type LayotProps = {
+  children: React.ReactNode
+}
+
+const index = ({ children }: LayotProps) => {
   return (
     <div className="overflow-hidden relative w-screen h-full" >
       <Header />

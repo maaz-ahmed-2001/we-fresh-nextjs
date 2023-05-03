@@ -1,13 +1,13 @@
-import { Accordian } from "@/common/components/Accordian";
-import FlexCenter from "@/common/components/FlexCenter";
-import FlexColumn from "@/common/components/FlexColumn";
-import { SubHeading } from "@/common/components/Headings";
-import SectionWrapper from "@/common/components/SectionWrapper";
+import { Accordian } from "../../common/components/Accordian";
+import FlexCenter from "../../common/components/FlexCenter";
+import FlexColumn from "../../common/components/FlexColumn";
+import { SubHeading } from "../../common/components/Headings";
+import SectionWrapper from "../../common/components/SectionWrapper";
 import React, { useState } from "react";
 
 const index = () => {
-  const [isShown, setIsShown] = useState(null);
-  const handleToggle = (id) => {
+  const [isShown, setIsShown] = useState<number | null>(null);
+  const handleToggle = (id: number) => {
     (isShown !== null) ? setIsShown(null) : setIsShown(id)
   };
   const accordianData = [
@@ -85,7 +85,12 @@ const index = () => {
 
 export default index;
 
-export const InfoBox = ({ heading, paragraph }) => {
+type infoBoxProps = {
+  heading: string
+  paragraph: string
+}
+
+export const InfoBox = ({ heading, paragraph }: infoBoxProps) => {
   return (
     <FlexColumn className="w-[280px]  sm:w-[380px] pb-[40px] !justify-end gap-3 rounded-md border-border border-2 h-[199px]">
       <h6 className="">{heading}</h6>

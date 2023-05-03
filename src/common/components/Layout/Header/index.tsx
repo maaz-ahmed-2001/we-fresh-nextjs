@@ -3,7 +3,7 @@ import SectionWrapper from "../../SectionWrapper";
 import FlexColumn from "../../FlexColumn";
 import { CloseIcon, ThreeBars } from "../../Icons";
 import ActionButton from "../../Button";
-import { useMediaQuery } from "@/hooks/UseMediaQuery";
+import { useMediaQuery } from '../../../../hooks/UseMediaQuery';
 
 const links = ["Our App", "For Business", "About us", "English"];
 
@@ -13,9 +13,9 @@ const index = () => {
 
   useEffect(() => {
     if (!isShown) {
-      document.querySelector("body").classList.remove("overflow-hidden");
+      document.querySelector<HTMLBodyElement>("body")!.classList.remove("overflow-hidden");
     } else {
-      document.querySelector("body").classList.add("overflow-hidden");
+      document.querySelector<HTMLBodyElement>("body")!.classList.add("overflow-hidden");
     }
   }, [isShown]);
 
@@ -58,7 +58,7 @@ const index = () => {
             </svg>
             {/* LINKS  */}
             <ul className="md:flex gap-8 hidden">
-              {links?.map((item, i) => {
+              {links.map((item, i) => {
                 return <li key={i}>{item}</li>;
               })}
             </ul>
@@ -88,17 +88,19 @@ const index = () => {
 
 export default index;
 
-export const NavbarSmall = ({ isShown }) => {
+type NavbarSmallProps = {
+  isShown: boolean
+}
+
+export const NavbarSmall = ({ isShown }: NavbarSmallProps) => {
   return (
     <FlexColumn
-      className={`px-5 z-20 -translate-y-full transition-transform ${
-        isShown && "translate-y-0"
-      }  transition-opacity absolute pt-[15vh] !items-start gap-5 !justify-start top-0 right-0 bg-navbar-bg h-screen w-full`}
+      className={`px-5 z-20 -translate-y-full transition-transform ${isShown && "translate-y-0"
+        }  transition-opacity absolute pt-[15vh] !items-start gap-5 !justify-start top-0 right-0 bg-navbar-bg h-screen w-full`}
     >
       <div
-        className={` ${
-          isShown ? "opacity-100" : "opacity-0"
-        } transition-opacity delay-150 w-full`}
+        className={` ${isShown ? "opacity-100" : "opacity-0"
+          } transition-opacity delay-150 w-full`}
       >
         <div className="divide-y h-[1px] mb-4 bg-light-grey w-full" />
         {links.map((link, i) => {
@@ -115,9 +117,8 @@ export const NavbarSmall = ({ isShown }) => {
         })}
       </div>
       <ActionButton
-        className={` ${
-          isShown ? "opacity-100" : "opacity-0"
-        } transition-opacity delay-300 !w-full`}
+        className={` ${isShown ? "opacity-100" : "opacity-0"
+          } transition-opacity delay-300 !w-full`}
       >
         Sign up
       </ActionButton>
