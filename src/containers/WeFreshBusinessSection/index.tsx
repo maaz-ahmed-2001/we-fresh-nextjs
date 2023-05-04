@@ -1,10 +1,11 @@
-import FlexCenter from '../../common/components/FlexCenter'
+import React, { useState } from "react";
+// Components
+import ActionButton from "../../common/components/Button";
+import FlexCenter from '../../common/components/FlexCenter';
 import FlexColumn from "../../common/components/FlexColumn";
+import TextInput from "../../common/components/Input";
 import SectionHeadings from "../../common/components/SectionHeadings";
 import SectionWrapper from "../../common/components/SectionWrapper";
-import React, { useState } from "react";
-import TextInput from "../../common/components/Input";
-import ActionButton from "../../common/components/Button";
 
 const index = () => {
   const [number, setNumber] = useState<number>();

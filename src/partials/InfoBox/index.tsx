@@ -1,5 +1,5 @@
-import { OperationCanceledException } from 'typescript';
-import FlexColumn from '../../common/components/FlexColumn'
+// Components
+import FlexColumn from '../../common/components/FlexColumn';
 
 type infoBoxProps = {
     heading: string

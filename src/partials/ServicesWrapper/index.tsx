@@ -1,5 +1,3 @@
-import React from "react";
-
 type ServicesWrapperProps = {
   src: string
   text: string

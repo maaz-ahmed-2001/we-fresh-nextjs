@@ -1,4 +1,4 @@
-import React from 'react'
+// Components
 import FlexColumn from "../FlexColumn";
 
 type FieldDescriptionProps = {

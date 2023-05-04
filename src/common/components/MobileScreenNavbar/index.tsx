@@ -1,5 +1,6 @@
-import FlexColumn from "../FlexColumn";
+// Components
 import ActionButton from '../Button'
+import FlexColumn from "../FlexColumn";
 
 type NavbarSmallProps = {
     links: string[] 

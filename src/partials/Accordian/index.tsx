@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+// Hooks
 import { useMediaQuery } from "../../utils/UseMediaQuery";
 
 type AccordianProps = {

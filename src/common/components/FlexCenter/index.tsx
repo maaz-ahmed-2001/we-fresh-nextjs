@@ -1,5 +1,3 @@
-import React from 'react'
-
 type FlexCenterProps = {
   children : React.ReactNode
   className ?: string

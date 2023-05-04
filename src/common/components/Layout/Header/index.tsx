@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+// Components
 import SectionWrapper from "../../SectionWrapper";
 import { CloseIcon, ThreeBars } from "../../Icons";
-import { useMediaQuery } from '../../../../utils/UseMediaQuery';
 import NavbarSmall from '../../MobileScreenNavbar'
-
+// Hooks
+import { useMediaQuery } from '../../../../utils/UseMediaQuery';
 
 const index = () => {
   const [isShown, setIsShown] = useState(false);

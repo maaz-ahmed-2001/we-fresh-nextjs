@@ -1,5 +1,3 @@
-
-
 type SubHeadingProps = {
     text: string
     className?: string

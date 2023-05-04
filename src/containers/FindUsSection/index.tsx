@@ -1,11 +1,11 @@
-import FlexCenter from '../../common/components/FlexCenter'
-import SectionHeadings from "../../common/components/SectionHeadings";
 import React, { useState } from "react";
-import TextInput from "../../common/components/Input";
-import SvgWrapper from '../../common/components/SvgWrapper'
+// Components
 import ActionButton from "../../common/components/Button";
+import FlexCenter from '../../common/components/FlexCenter';
+import SectionHeadings from "../../common/components/SectionHeadings";
 import SectionWrapper from "../../common/components/SectionWrapper";
-import Image from 'next/image';
+import SvgWrapper from '../../common/components/SvgWrapper';
+import TextInput from "../../common/components/Input";
 
 const index = () => {
   const [area, setArea] = useState<string>();

@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import InputComponent from "../../common/components/Input";
+// Components
 import ActionButton from "../../common/components/Button";
-import { AppleIconSvg } from "../../common/components/Icons";
-import SectionWrapper from "../../common/components/SectionWrapper";
 import FlexCenter from "../../common/components/FlexCenter";
 import FlexColumn from "../../common/components/FlexColumn";
-import LeftBlueSvg from "../../../public/HeroSectionPng/LeftBlueImage.svg";
+import { AppleIconSvg } from "../../common/components/Icons";
+import InputComponent from "../../common/components/Input";
+import SectionWrapper from "../../common/components/SectionWrapper";
 import SvgWrapper from "../../common/components/SvgWrapper";
-import Image from "next/image";
+
 
 const index = () => {
   const [number, setNumber] = useState<number>();

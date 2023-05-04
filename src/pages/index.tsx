@@ -1,13 +1,12 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import HeroSection from "../containers/Hero";
-import ServicesSection from "../containers/ServiceSection";
+// Components
 import FindUsSection from "../containers/FindUsSection";
+import GetTheAppSection from "../containers/GetTheAppSection";
+import HeroSection from "../containers/Hero";
+import Layout from "../common/components/Layout";
 import OurPartnerSection from "../containers/OurPartnerSection";
 import QuerySection from "../containers/QuerySection";
+import ServicesSection from "../containers/ServiceSection";
 import WeFreshBusinessSection from "../containers/WeFreshBusinessSection";
-import GetTheAppSection from "../containers/GetTheAppSection";
-import Layout from "../common/components/Layout";
 
 export default function Home() {
   return (

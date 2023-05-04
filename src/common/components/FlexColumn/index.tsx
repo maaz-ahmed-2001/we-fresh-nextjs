@@ -1,5 +1,3 @@
-import React from 'react'
-
 type FlexColumnProps = {
   children : React.ReactNode
   className ?: string

@@ -1,8 +1,9 @@
 import React from "react";
+// Components
 import FlexColumn from "../../FlexColumn";
 import FlexCenter from "../../FlexCenter";
-import { WeFreshLogoSvg } from "../../Icons";
 import FieldDescription from '../../FooterFieldDescription'
+import { WeFreshLogoSvg } from "../../Icons";
 
 const index = () => {
   const data = [

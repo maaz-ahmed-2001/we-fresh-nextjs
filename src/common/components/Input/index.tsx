@@ -1,5 +1,3 @@
-import React from "react";
-
 type InputProps = {
   type:  React.HTMLInputTypeAttribute
   placeholder: string

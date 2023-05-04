@@ -1,15 +1,17 @@
-import React, { useState } from "react";
-import ServicesWrapper from "../../partials/ServicesWrapper";
-import SectionHeadings from "../../common/components/SectionHeadings";
-import FlexCenter from '../../common/components/FlexCenter'
-import AppDetailsComponent from "../../partials/AppDetailsComponent";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import FlexColumn from "../../common/components/FlexColumn";
-import { links } from "./data/Data";
-import SectionWrapper from "../../common/components/SectionWrapper";
+import { useState } from "react";
 import Image from "next/image";
-import SvgWrapper from '../../common/components/SvgWrapper'
+import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Components
+import AppDetailsComponent from "../../partials/AppDetailsComponent";
+import FlexCenter from '../../common/components/FlexCenter';
+import FlexColumn from "../../common/components/FlexColumn";
+import SectionHeadings from "../../common/components/SectionHeadings";
+import SectionWrapper from "../../common/components/SectionWrapper";
+import SvgWrapper from '../../common/components/SvgWrapper';
+import ServicesWrapper from "../../partials/ServicesWrapper";
+// Data
+import { links } from "./data/Data";
 
 const index = () => {
   const [activeSlideNumber, setActiveSlideNumber] = useState(0);

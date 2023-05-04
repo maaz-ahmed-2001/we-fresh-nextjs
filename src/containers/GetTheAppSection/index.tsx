@@ -1,9 +1,9 @@
-import FlexCenter from '../../common/components/FlexCenter'
+// Components
+import FlexCenter from '../../common/components/FlexCenter';
 import FlexColumn from "../../common/components/FlexColumn";
 import SectionHeadings from "../../common/components/SectionHeadings";
 import SectionWrapper from "../../common/components/SectionWrapper";
 import SvgWrapper from "../../common/components/SvgWrapper";
-import React from "react";
 
 const index = () => {
   return (

@@ -1,6 +1,5 @@
 import FlexColumn from '../../common/components/FlexColumn'
 
-
 type AppDetailsComponentProps = {
     heading: string
     description: string

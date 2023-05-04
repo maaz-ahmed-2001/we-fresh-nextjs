@@ -1,10 +1,11 @@
+import React, { useState } from "react";
+// Components
 import Accordian from "../../partials/Accordian";
 import FlexCenter from '../../common/components/FlexCenter'
 import FlexColumn from "../../common/components/FlexColumn";
-import SubHeading from "../../common/components/SubHeadings";
 import InfoBox from '../../partials/InfoBox'
+import SubHeading from "../../common/components/SubHeadings";
 import SectionWrapper from "../../common/components/SectionWrapper";
-import React, { useState } from "react";
 
 const index = () => {
   const [isShown, setIsShown] = useState<number | null>(null);
