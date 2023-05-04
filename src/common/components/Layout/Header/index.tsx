@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SectionWrapper from "../../SectionWrapper";
 import { CloseIcon, ThreeBars } from "../../Icons";
-import { useMediaQuery } from '../../../../hooks/UseMediaQuery';
+import { useMediaQuery } from '../../../../utils/UseMediaQuery';
 import NavbarSmall from '../../MobileScreenNavbar'
 
 

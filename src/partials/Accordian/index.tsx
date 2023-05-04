@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useMediaQuery } from "../../hooks/UseMediaQuery";
+import { useMediaQuery } from "../../utils/UseMediaQuery";
 
 type AccordianProps = {
   paragraph: string

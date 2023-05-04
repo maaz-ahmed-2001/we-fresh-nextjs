@@ -9,11 +9,9 @@ import ActionButton from "../../common/components/Button";
 const index = () => {
   const [number, setNumber] = useState<number>();
 
-  const handleChange = (event:React.ChangeEvent<HTMLInputElement> ): void  => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setNumber(Number(event.target.value))
   }
-
-
 
   return (
     <SectionWrapper className="h-full pt-[88px] pb-[103px] max-h-[400px]">

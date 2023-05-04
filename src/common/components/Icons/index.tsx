@@ -1,13 +1,11 @@
-import styles from "./styles.module.scss";
-
-type HeightWidths = {
+type IconProps = {
   height?: string
   width?: string
+  className ?: string
+  logoColor ?: string
 }
 
-type AppleIconSvgProps = HeightWidths
-
-export const AppleIconSvg = ({ height, width }: AppleIconSvgProps) => {
+export const AppleIconSvg = ({ height, width }: IconProps) => {
   return (
     <svg
       width={width || "45"}
@@ -27,36 +25,8 @@ export const AppleIconSvg = ({ height, width }: AppleIconSvgProps) => {
   );
 };
 
-type YellowCircleSvgProps =  {
-  className ?: string
-} & HeightWidths
 
-export const YellowCircleSvg = ({ height, width, className } : YellowCircleSvgProps  ) => {
-  return (
-    <svg
-      width="100%"
-      height="100%"
-      className={`-z-10 ${className} `}
-      viewBox="0 0 472 411"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        opacity="0.551921"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M110.479 386.019C-14.2282 330.496 -16.7426 197.001 24.3659 104.67C65.4745 12.3386 268.388 -29.6937 393.095 25.8295C517.802 81.3529 466.969 212.018 425.86 304.349C384.751 396.681 235.187 441.543 110.479 386.019Z"
-        fill="#FFE749"
-      />
-    </svg>
-  );
-};
-
-type WeFreshLogoSvgProps = {
-  logoColor : string
-} & HeightWidths
-
-export const WeFreshLogoSvg = ({ width, height, logoColor } : WeFreshLogoSvgProps ) => {
+export const WeFreshLogoSvg = ({ width, height, logoColor } : IconProps ) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -80,64 +50,6 @@ export const WeFreshLogoSvg = ({ width, height, logoColor } : WeFreshLogoSvgProp
   );
 };
 
-export const FindUsSectionYellowSvg = () => {
-  return (
-    <svg
-      width="100%"
-      height="100%"
-      viewBox="0 0 468 397"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        opacity="0.551921"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M468 218.887C468 330.293 366.918 397 255.468 397C144.018 397 0 348.486 0 237.079C0 125.673 135.431 0 246.881 0C358.331 0 468 107.48 468 218.887Z"
-        fill="#FFE749"
-      />
-    </svg>
-  );
-};
-
-export const FindUsSectionBlueSvg = () => {
-  return (
-    <svg
-      width="100%"
-      height="100%"
-      viewBox="0 0 521 630"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M0 299.548C0 469.357 264.855 658.718 448.329 626.358C631.802 593.998 807 358.357 807 188.548C807 18.7388 583.719 0 424.211 0C264.702 0 0 129.739 0 299.548Z"
-        fill="#96D5F0"
-      />
-    </svg>
-  );
-};
-
-export const OurPartnersSectionBlueSvg = () => {
-  return (
-    <svg
-      width="100%"
-      height="100%"
-      viewBox="0 0 547 410"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        opacity="0.197568"
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M303.886 407.63C428.248 386.57 547 233.216 547 122.706C547 12.1951 445.242 0 287.538 0C129.834 0 0 84.4332 0 194.944C0 305.454 179.524 428.69 303.886 407.63Z"
-        fill="#96D5F0"
-      />
-    </svg>
-  );
-};
 
 export const ThreeBars = () => {
   return (

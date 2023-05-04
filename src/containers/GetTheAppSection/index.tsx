@@ -2,6 +2,7 @@ import FlexCenter from '../../common/components/FlexCenter'
 import FlexColumn from "../../common/components/FlexColumn";
 import SectionHeadings from "../../common/components/SectionHeadings";
 import SectionWrapper from "../../common/components/SectionWrapper";
+import SvgWrapper from "../../common/components/SvgWrapper";
 import React from "react";
 
 const index = () => {
@@ -22,12 +23,8 @@ const index = () => {
         </FlexColumn>
         {/* LINKS */}
         <FlexCenter className='gap-3 !flex-col md:!flex-row ' >
-          <div className="h-[55px] w-full max-w-[165px] md:max-w-[186px]">
-            <img src="/GetTheAppSection/Apple.png" className="w-full h-full" />
-          </div>
-          <div className="h-[55px] w-full max-w-[165px] md:max-w-[186px]">
-            <img src="/GetTheAppSection/Apple.png" className="w-full h-full" />
-          </div>
+          <SvgWrapper src="/GetTheAppSection/Apple.png" className="h-[55px] relative w-[165px] md:w-[186px]" />
+          <SvgWrapper src="/GetTheAppSection/Googleplay.png" className="h-[55px] relative w-[165px] md:w-[186px]" />
         </FlexCenter>
       </FlexColumn>
     </SectionWrapper>

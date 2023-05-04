@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import ServicesWrapper from "../../partials/ServicesWrapper";
 import SectionHeadings from "../../common/components/SectionHeadings";
 import FlexCenter from '../../common/components/FlexCenter'
-import { YellowCircleSvg } from "../../common/components/Icons";
+import AppDetailsComponent from "../../partials/AppDetailsComponent";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import FlexColumn from "../../common/components/FlexColumn";
 import { links } from "./data/Data";
 import SectionWrapper from "../../common/components/SectionWrapper";
+import Image from "next/image";
+import SvgWrapper from '../../common/components/SvgWrapper'
 
 const index = () => {
   const [activeSlideNumber, setActiveSlideNumber] = useState(0);
@@ -70,23 +72,18 @@ const index = () => {
         {/* OUR APP SECTION */}
         <FlexCenter className="gap-8 flex-col pt-14 sm:pt-0 md:h-[1069px] lg:max-h-[770px] lg:flex-row w-full !justify-center lg:justify-evenly ">
           <FlexCenter className="relative h-max">
-            <img
-              src="/OurAppIcons/iPhone_Black.png"
-              className=" absolute h-[319px] sm:h-[580px] w-full max-w-[161px] sm:max-w-[291px]"
-              alt="Iphone Black"
-            />
+            <div className=" absolute h-[319px] sm:h-[580px] w-full max-w-[161px] sm:max-w-[291px]" >
+              <SvgWrapper src="/OurAppIcons/iPhone_Black.png" className="h-full w-full relative" />
+            </div>
             <div className="sm:h-[444px] h-[242px] w-[280px] sm:w-[448px] ">
-              <YellowCircleSvg
-                className="w-full h-full"
-                height="444px"
-                width="448px"
-              />
+              <Image src='/OurAppIcons/YellowCircle.svg' alt="YellowCircle" width={448} height={444} />
             </div>
           </FlexCenter>
           <FlexColumn className="gap-3 pt-[17px] sm:!pt-[5px] sm:mt-7">
             {links[activeSlideNumber].data.map((item, i) => {
               return (
                 <AppDetailsComponent
+                  key={i}
                   description={item.description}
                   heading={item.heading}
                 />
@@ -101,18 +98,3 @@ const index = () => {
 
 export default index;
 
-type AppDetailsComponentProps = {
-  heading: string
-  description: string
-}
-
-
-export const AppDetailsComponent = ({ heading, description }: AppDetailsComponentProps) => {
-  return (
-    <FlexColumn className="gap-3 group !items-start transition-colors hover:bg-blue-light relative sm:h-[195px] rounded-lg max-w-[599px] w-full p-4 text-left">
-      <h6 className="text-txt-blue w-full">{heading}</h6>
-      <p className="text-sm !w-full ">{description}</p>
-      <div className="absolute h-6 w-6 hidden sm:group-hover:block transition-colors rounded-bl-md top-[calc(50%-12px)] -left-[12px] rotate-45 bg-blue-light" />
-    </FlexColumn>
-  );
-};
