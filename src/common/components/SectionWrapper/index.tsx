@@ -6,7 +6,7 @@ type SectionWrapperProps = {
   zIndex?: string
 }
 
-const SectionWrapper = ({ children, className, zIndex }: SectionWrapperProps) => {
+const index = ({ children, className, zIndex }: SectionWrapperProps) => {
   return (
     <section className={`w-full ${zIndex && ('z-' + zIndex)} relative h-full block m-auto`} >
       <div
@@ -18,4 +18,4 @@ const SectionWrapper = ({ children, className, zIndex }: SectionWrapperProps) =>
   );
 };
 
-export default SectionWrapper;
+export default index;

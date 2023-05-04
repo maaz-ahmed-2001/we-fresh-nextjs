@@ -2,6 +2,7 @@ import React from "react";
 import FlexColumn from "../../FlexColumn";
 import FlexCenter from "../../FlexCenter";
 import { WeFreshLogoSvg } from "../../Icons";
+import FieldDescription from '../../FooterFieldDescription'
 
 const index = () => {
   const data = [
@@ -59,20 +60,6 @@ const index = () => {
           <p className="!w-full !max-w-max" >© 2020 WeFresh. All Rights Reserved.</p>
         </FlexCenter>
       </FlexColumn>
-  );
-};
-
-type FieldDescriptionProps = {
-  title : string
-  description : string
-}
-
-export const FieldDescription = ({ title, description } : FieldDescriptionProps ) => {
-  return (
-    <FlexColumn className="md:p-4 py-5 md:items-start md:py-0 gap-4">
-      <h6 className="md:max-w-[114px] w-full">{title}</h6>
-      <p className="w-full max-w-[130px]">{description}</p>
-    </FlexColumn>
   );
 };
 

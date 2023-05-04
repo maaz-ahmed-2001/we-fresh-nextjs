@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import SectionWrapper from "../../SectionWrapper";
-import FlexColumn from "../../FlexColumn";
 import { CloseIcon, ThreeBars } from "../../Icons";
-import ActionButton from "../../Button";
 import { useMediaQuery } from '../../../../hooks/UseMediaQuery';
+import NavbarSmall from '../../MobileScreenNavbar'
 
-const links = ["Our App", "For Business", "About us", "English"];
 
 const index = () => {
   const [isShown, setIsShown] = useState(false);
   const isTablet = useMediaQuery("(max-width: 768px)");
+  const links = ["Our App", "For Business", "About us", "English"];
 
   useEffect(() => {
     if (!isShown) {
@@ -80,48 +79,10 @@ const index = () => {
             )}
           </nav>
         </SectionWrapper>
-        <NavbarSmall isShown={isShown} />
+        <NavbarSmall links={links} isShown={isShown} />
       </header>
     </>
   );
 };
 
 export default index;
-
-type NavbarSmallProps = {
-  isShown: boolean
-}
-
-export const NavbarSmall = ({ isShown }: NavbarSmallProps) => {
-  return (
-    <FlexColumn
-      className={`px-5 z-20 -translate-y-full transition-transform ${isShown && "translate-y-0"
-        }  transition-opacity absolute pt-[15vh] !items-start gap-5 !justify-start top-0 right-0 bg-navbar-bg h-screen w-full`}
-    >
-      <div
-        className={` ${isShown ? "opacity-100" : "opacity-0"
-          } transition-opacity delay-150 w-full`}
-      >
-        <div className="divide-y h-[1px] mb-4 bg-light-grey w-full" />
-        {links.map((link, i) => {
-          return (
-            <div
-              key={i}
-              className="flex text-white font-normal items-start flex-col gap-3 mb-5 justify-center"
-            >
-              <div>{link}</div>
-              {/* DIVIDER */}
-              <div className="divide-y h-[1px] w-full bg-light-grey " />
-            </div>
-          );
-        })}
-      </div>
-      <ActionButton
-        className={` ${isShown ? "opacity-100" : "opacity-0"
-          } transition-opacity delay-300 !w-full`}
-      >
-        Sign up
-      </ActionButton>
-    </FlexColumn>
-  );
-};

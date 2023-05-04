@@ -5,7 +5,7 @@ type ServicesWrapperProps = {
   text: string
 }
 
-const ServicesWrapper = ({ src, text }: ServicesWrapperProps) => {
+const index = ({ src, text }: ServicesWrapperProps) => {
   return (
     <div
       className={`p-3 flex-col flex gap-3 transition-transform duration-200 items-center justify-center rounded-md group hover:scale-105`}
@@ -20,4 +20,4 @@ const ServicesWrapper = ({ src, text }: ServicesWrapperProps) => {
   );
 };
 
-export default ServicesWrapper;
+export default index;

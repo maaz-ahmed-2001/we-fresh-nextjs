@@ -5,7 +5,7 @@ type FlexColumnProps = {
   className ?: string
 }
 
-const FlexColumn = ({ children, className } : FlexColumnProps ) => {
+const index = ({ children, className } : FlexColumnProps ) => {
   return (
     <div className={`flex items-center justify-center flex-col ${className} `} >
         {children}
@@ -13,4 +13,4 @@ const FlexColumn = ({ children, className } : FlexColumnProps ) => {
   )
 }
 
-export default FlexColumn;
+export default index;

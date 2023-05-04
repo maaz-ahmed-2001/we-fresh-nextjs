@@ -1,7 +1,8 @@
-import { Accordian } from "../../common/components/Accordian";
-import FlexCenter from "../../common/components/FlexCenter";
+import Accordian from "../../partials/Accordian";
+import FlexCenter from '../../common/components/FlexCenter'
 import FlexColumn from "../../common/components/FlexColumn";
-import { SubHeading } from "../../common/components/Headings";
+import SubHeading from "../../common/components/SubHeadings";
+import InfoBox from '../../partials/InfoBox'
 import SectionWrapper from "../../common/components/SectionWrapper";
 import React, { useState } from "react";
 
@@ -84,17 +85,3 @@ const index = () => {
 };
 
 export default index;
-
-type infoBoxProps = {
-  heading: string
-  paragraph: string
-}
-
-export const InfoBox = ({ heading, paragraph }: infoBoxProps) => {
-  return (
-    <FlexColumn className="w-[280px]  sm:w-[380px] pb-[40px] !justify-end gap-3 rounded-md border-border border-2 h-[199px]">
-      <h6 className="">{heading}</h6>
-      <p className="max-w-[317px] text-center w-full">{paragraph}</p>
-    </FlexColumn>
-  );
-};

@@ -5,7 +5,7 @@ type FlexCenterProps = {
   className ?: string
 }
 
-const FlexCenter = ({ children, className } : FlexCenterProps ) => {
+const index = ({ children, className } : FlexCenterProps ) => {
   return (
     <div className={`flex items-center flex-row justify-center ${className} `} >
         {children}
@@ -13,4 +13,4 @@ const FlexCenter = ({ children, className } : FlexCenterProps ) => {
   )
 }
 
-export default FlexCenter
+export default index;

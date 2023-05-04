@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import ServicesWrapper from "../../common/components/ServicesWrapper";
-import { SectionHeadings } from "../../common/components/Headings";
-import FlexCenter from "../../common/components/FlexCenter";
+import ServicesWrapper from "../../partials/ServicesWrapper";
+import SectionHeadings from "../../common/components/SectionHeadings";
+import FlexCenter from '../../common/components/FlexCenter'
 import { YellowCircleSvg } from "../../common/components/Icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import FlexColumn from "../../common/components/FlexColumn";
-import SectionWrapper from "../../common/components/SectionWrapper";
 import { links } from "./data/Data";
+import SectionWrapper from "../../common/components/SectionWrapper";
 
 const index = () => {
   const [activeSlideNumber, setActiveSlideNumber] = useState(0);

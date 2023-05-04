@@ -5,12 +5,8 @@ type SectionHeadingProps = {
   orientation: 'normal' | 'revert'
 }
 
-type SubHeadingProps = {
-  text: string
-  className?: string
-}
 
-export const SectionHeadings = ({
+const index = ({
   normalText,
   boldText,
   orientation,
@@ -28,6 +24,6 @@ export const SectionHeadings = ({
   );
 };
 
-export const SubHeading = ({ text, className }: SubHeadingProps) => {
-  return <h3 className={`section-heading ${className}`}>{text}</h3>;
-};
+
+
+export default index;

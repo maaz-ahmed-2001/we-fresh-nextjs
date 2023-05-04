@@ -1,5 +1,5 @@
-import FlexCenter from "../../common/components/FlexCenter";
-import { SectionHeadings } from "../../common/components/Headings";
+import FlexCenter from '../../common/components/FlexCenter'
+import SectionHeadings from "../../common/components/SectionHeadings";
 import React, { useState } from "react";
 import TextInput from "../../common/components/Input";
 import ActionButton from "../../common/components/Button";

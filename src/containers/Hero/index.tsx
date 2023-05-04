@@ -3,7 +3,7 @@ import InputComponent from "../../common/components/Input";
 import ActionButton from "../../common/components/Button";
 import { AppleIconSvg } from "../../common/components/Icons";
 import SectionWrapper from "../../common/components/SectionWrapper";
-import FlexCenter from "../../common/components/FlexCenter";
+import FlexCenter from '../../common/components/FlexCenter'
 import FlexColumn from "../../common/components/FlexColumn";
 
 const index = () => {

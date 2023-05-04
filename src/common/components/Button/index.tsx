@@ -13,4 +13,4 @@ const index = ({ children  , className } : ButtonProps) => {
   )
 }
 
-export default index
+export default index;

@@ -1,6 +1,5 @@
+import React, { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "../../hooks/UseMediaQuery";
-import { useEffect, useRef, useState } from "react";
-import React from "react";
 
 type AccordianProps = {
   paragraph: string
@@ -11,7 +10,7 @@ type AccordianProps = {
 }
 
 
-export const Accordian = ({ paragraph, heading, toggleFunc, id, isOpen }: AccordianProps) => {
+const index = ({ paragraph, heading, toggleFunc, id, isOpen }: AccordianProps) => {
   const [panelHeight, setPanelHeight] = useState<number>(0);
   const paragraphRef = useRef<HTMLParagraphElement|null>(null);
   const headingRef = useRef<HTMLHeadingElement | null>(null);
@@ -76,3 +75,5 @@ export const Accordian = ({ paragraph, heading, toggleFunc, id, isOpen }: Accord
     </div>
   );
 };
+
+export default index;
