@@ -2,7 +2,7 @@ import React from "react";
 
 type SectionWrapperProps = {
   children: React.ReactNode
-  className: string
+  className?: string
   zIndex?: string
 }
 

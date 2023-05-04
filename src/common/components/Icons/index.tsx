@@ -28,7 +28,7 @@ export const AppleIconSvg = ({ height, width }: AppleIconSvgProps) => {
 };
 
 type YellowCircleSvgProps =  {
-  className : string
+  className ?: string
 } & HeightWidths
 
 export const YellowCircleSvg = ({ height, width, className } : YellowCircleSvgProps  ) => {

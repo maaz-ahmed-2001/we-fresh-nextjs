@@ -2,7 +2,7 @@ import React from 'react'
 
 type ButtonProps = {
   children : React.ReactNode
-  className : string  
+  className ?: string  
 }
 
 const index = ({ children  , className } : ButtonProps) => {
