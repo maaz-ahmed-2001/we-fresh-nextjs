@@ -37,7 +37,7 @@ const index = () => {
           />
           <div className="mb-10">
             <Swiper
-              className="bg-[#F2F2F2] lg:bg-white"
+              className="bg-swiper-bg lg:bg-white"
               spaceBetween={50}
               slidesPerView={1.7}
               loop={true}
