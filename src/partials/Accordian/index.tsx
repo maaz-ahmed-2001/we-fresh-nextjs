@@ -6,14 +6,14 @@ type AccordianProps = {
   paragraph: string
   heading: string
   id: number | string
-  isOpen: boolean
-  toggleFunc: (id : number) => void
+  isOpen: number | boolean
+  toggleFunc: (id: number) => void
 }
 
 
 const index = ({ paragraph, heading, toggleFunc, id, isOpen }: AccordianProps) => {
   const [panelHeight, setPanelHeight] = useState<number>(0);
-  const paragraphRef = useRef<HTMLParagraphElement|null>(null);
+  const paragraphRef = useRef<HTMLParagraphElement | null>(null);
   const headingRef = useRef<HTMLHeadingElement | null>(null);
   const isTablet = useMediaQuery("(max-width: 640px)");
 
@@ -41,7 +41,7 @@ const index = ({ paragraph, heading, toggleFunc, id, isOpen }: AccordianProps) =
         className={`w-full p-[20px] md:px-[41px] transition-all border-b-2 sm:border-2 sm:rounded-md border-b-border sm:border-border `}
         onClick={() => toggleFunc(Number(id))}
       >
-        <h6>{heading}</h6>
+        <h5>{heading}</h5>
       </div>
       <div
         style={{
@@ -63,9 +63,9 @@ const index = ({ paragraph, heading, toggleFunc, id, isOpen }: AccordianProps) =
         className={`w-full flex items-start justify-center transition-all border-b-2 sm:border-2 gap-[14px] md:gap-[12px] sm:rounded-md ${isOpen && "md:border-txt-blue"
           } border-b-border sm:border-border flex-col overflow-hidden`}
       >
-        <h6 ref={headingRef} className={`${isOpen && "text-txt-blue"}`}>
+        <h5 ref={headingRef} className={`${isOpen && "text-txt-blue"}`}>
           {heading}
-        </h6>
+        </h5>
         <p
           ref={paragraphRef}
           className={`sm:max-w-[679px] transition-all duration-500 w-full`}

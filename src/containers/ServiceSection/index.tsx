@@ -81,7 +81,7 @@ const index = () => {
               <Image src='/OurAppIcons/YellowCircle.svg' alt="YellowCircle" width={448} height={444} />
             </div>
           </FlexCenter>
-          <FlexColumn className="gap-3 pt-[17px] sm:!pt-[5px] sm:mt-7">
+          <FlexColumn className="gap-3  pt-[17px] px-3 sm:px-0 sm:!pt-[5px] sm:mt-7">
             {links[activeSlideNumber].data.map((item, i) => {
               return (
                 <AppDetailsComponent
@@ -99,4 +99,3 @@ const index = () => {
 };
 
 export default index;
-

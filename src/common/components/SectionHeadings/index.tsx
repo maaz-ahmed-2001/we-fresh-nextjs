@@ -15,11 +15,11 @@ const index = ({
   return orientation === "normal" ? (
     <h3 className={`section-heading ${className}`}>
       {normalText} &nbsp;
-      <strong>{boldText}</strong>
+      <b>{boldText}</b>
     </h3>
   ) : (
     <h3 className={`section-heading ${className}`}>
-      <strong>{boldText}</strong> &nbsp; {normalText}
+      <b>{boldText}</b> &nbsp; {normalText}
     </h3>
   );
 };

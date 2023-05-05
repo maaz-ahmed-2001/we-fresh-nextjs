@@ -8,7 +8,7 @@ type FieldDescriptionProps = {
 
 const index = ({ title, description }: FieldDescriptionProps) => {
     return (
-        <FlexColumn className="md:p-4 py-5 md:items-start md:py-0 gap-4">
+        <FlexColumn className="md:p-4 py-5 cursor-pointer md:items-start md:py-0 gap-4">
             <h6 className="md:max-w-[114px] w-full">{title}</h6>
             <p className="w-full max-w-[130px]">{description}</p>
         </FlexColumn>

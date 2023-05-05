@@ -42,7 +42,7 @@ const index = () => {
           </FlexCenter>
           {/* AVAILABLE ON ICONS */}
           <FlexColumn className="gap-3 !justify-start">
-            <p className="w-full md:w-max" >Available on</p>
+            <h6 className="w-full md:w-max" >Available on</h6>
             {/* ICONS */}
             <FlexCenter className="gap-3">
               <div className="w-[45px] h-[45px]">

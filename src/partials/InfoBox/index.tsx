@@ -8,9 +8,9 @@ type infoBoxProps = {
 
 const index = ({ heading, paragraph }: infoBoxProps) => {
     return (
-        <FlexColumn className="w-[280px]  sm:w-[380px] pb-[40px] !justify-end gap-3 rounded-md border-border border-2 h-[199px]">
-            <h6 className="">{heading}</h6>
-            <p className="max-w-[317px] text-center w-full">{paragraph}</p>
+        <FlexColumn className="w-[280px] sm:w-[380px] pb-[15px] sm:pb-[40px] !justify-end gap-3 rounded-md border-border border-2 h-[199px]">
+            <h5 className="">{heading}</h5>
+            <p className="max-w-[317px] leading-5 text-center w-full">{paragraph}</p>
         </FlexColumn>
     );
 };

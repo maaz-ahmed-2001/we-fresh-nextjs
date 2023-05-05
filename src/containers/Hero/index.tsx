@@ -22,7 +22,7 @@ const index = () => {
       {/* THE LEFT BLUE ONE */}
       <SvgWrapper
         src="/HeroSectionPng/LeftBlueImage.svg"
-        className="absolute lg:rotate-0 rotate-90 scale-[2.2] sm:scale-[2] lg:scale-100 top-[-25%] sm:top-[-48%] lg:top-[0%] left-[-20%] sm:left-[-23%] md:left-[-16%] lg:left-[-22%] xl:left-[-10%] 2xl:left-[0%] -z-10  sm:h-full w-full h-[397px] sm:max-h-[689px] xl:max-h-[889px] xl:max-w-[1139px]"
+        className="absolute lg:rotate-0 rotate-90 scale-[2.2] sm:scale-[2] lg:scale-100 top-[-25%] sm:top-[-48%] lg:top-[0%] left-[-15%] sm:left-[-23%] md:left-[-16%] lg:left-[-22%] xl:left-[-10%] 2xl:left-[0%] -z-10  sm:h-full w-full h-[397px] sm:max-h-[689px] xl:max-h-[889px] xl:max-w-[1139px]"
       />
       {/* LIGHT BLUE SVG */}
       <SvgWrapper
@@ -45,12 +45,12 @@ const index = () => {
         {/* LEFT SIDE FORM DIV */}
         <FlexColumn className="p-7 lg:p-5 gap-5  lg:!items-start">
           {/* H2 HEADING */}
-          <h2 className="text-[22px] mb-2 md:text-3xl lg:text-3xl xl:text-[42px] text-white">
+          <h2 className="mb-2 text-white">
             The smarter way
             <br />
-            <strong className="w-full md:pt-[10px] block max-w-[481px]">
+            <b className="w-full md:pt-[10px] block max-w-[481px]">
               to order your food
-            </strong>
+            </b>
           </h2>
           {/* FORM DIV */}
           <FlexCenter className="gap-3">
@@ -71,7 +71,7 @@ const index = () => {
               {/* APPLE STORE ICON */}
               <AppleIconSvg height="45px" width="45px" />
               {/* GOOGLE PLAYSTORE ICON */}
-              <SvgWrapper src="/HeroSectionPng/Googleplay.png" className="relative h-[45px] w-[45px]" />
+              <SvgWrapper src="/HeroSectionPng/Googleplay.png" className="relative cursor-pointer h-[45px] w-[45px]" />
             </FlexCenter>
           </FlexColumn>
         </FlexColumn>

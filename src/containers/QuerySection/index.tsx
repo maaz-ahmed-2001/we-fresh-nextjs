@@ -8,9 +8,29 @@ import SubHeading from "../../common/components/SubHeadings";
 import SectionWrapper from "../../common/components/SectionWrapper";
 
 const index = () => {
-  const [isShown, setIsShown] = useState<number | null>(null);
+  const [isShown, setIsShown] = useState<number[]>([]);
+  const [isMultiple, setIsMultiple] = useState<boolean>(true)
+
   const handleToggle = (id: number) => {
-    (isShown !== null) ? setIsShown(null) : setIsShown(id)
+    if (isMultiple) {
+      // CHECKING IF THE ARRAY LENGTH IS EMPTY OR NOT
+      if (isShown.includes(id)) {
+        setIsShown(isShown.filter((i) => i !== id));
+      } else {
+        setIsShown([...isShown, id]);
+      }
+    } else {
+      // ONE TIME WITH SWITCHING LOGIC
+      if (isShown.length !== 0) {
+        if (isShown.includes(id)) {
+          setIsShown([])
+        } else {
+          setIsShown([id])
+        }
+      } else {
+        setIsShown([id])
+      }
+    }
   };
   const accordianData = [
     {
@@ -40,7 +60,7 @@ const index = () => {
     },
   ];
   return (
-    <SectionWrapper className="h-full px-0 max-h-[1375px]">
+    <SectionWrapper className="px-0">
       <FlexColumn className="gap-5 py-2">
         <SubHeading text="Got Questions?" />
         <p className="max-w-[294px] w-full text-center">
@@ -49,12 +69,13 @@ const index = () => {
         {/* QUESTIONS */}
         <FlexColumn className="w-full h-max gap-2">
           {accordianData.map((item, index) => {
+            // const isPresent = isShown.find(i => i === index)
             return (
               <Accordian
                 key={index}
                 id={index}
                 toggleFunc={handleToggle}
-                isOpen={isShown === index}
+                isOpen={isShown.includes(index)}
                 heading={item.heading}
                 paragraph={item.paragraph}
               />
@@ -70,7 +91,7 @@ const index = () => {
           </p>
         </FlexColumn>
         {/* CONTACT INFO DIV'S */}
-        <FlexCenter className="w-full !flex-col sm:!flex-row  h-max gap-3">
+        <FlexCenter className="w-full px-3 !flex-col sm:!flex-row  h-max gap-3">
           <InfoBox
             heading="+66 8959888"
             paragraph="Lorem ipsum dolor sit amet, consectetur"
