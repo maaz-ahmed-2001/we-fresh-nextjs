@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 // Components
 import ActionButton from "../../common/components/Button";
+import { AppleIconSvg } from "../../common/components/Icons";
 import FlexCenter from "../../common/components/FlexCenter";
 import FlexColumn from "../../common/components/FlexColumn";
-import { AppleIconSvg } from "../../common/components/Icons";
 import InputComponent from "../../common/components/Input";
 import SectionWrapper from "../../common/components/SectionWrapper";
 import SvgWrapper from "../../common/components/SvgWrapper";
 
 
-const index = () => {
+
+const index = ({ data }: any) => {
+  console.log(data, "hi");
   const [number, setNumber] = useState<number>();
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setNumber(Number(event.target.value));
@@ -71,16 +73,25 @@ const index = () => {
               {/* APPLE STORE ICON */}
               <AppleIconSvg height="45px" width="45px" />
               {/* GOOGLE PLAYSTORE ICON */}
-              <SvgWrapper src="/HeroSectionPng/Googleplay.png" className="relative cursor-pointer h-[45px] w-[45px]" />
+              <SvgWrapper
+                src="/HeroSectionPng/Googleplay.png"
+                className="relative cursor-pointer h-[45px] w-[45px]"
+              />
             </FlexCenter>
           </FlexColumn>
         </FlexColumn>
         {/* IMAGE SECTION AREA */}
         <div className="w-full max-w-[291px]  relative">
           {/* IPHONE BLACK IMAGE */}
-          <SvgWrapper src="/HeroSectionPng/iPhone_Black.png" className="h-[319px] relative sm:h-[580px] block m-auto  max-w-[161px] sm:max-w-[291px] " />
+          <SvgWrapper
+            src="/HeroSectionPng/iPhone_Black.png"
+            className="h-[319px] relative sm:h-[580px] block m-auto  max-w-[161px] sm:max-w-[291px] "
+          />
           {/* YELLOW SVG */}
-          <SvgWrapper src="/HeroSectionPng/Yellow.svg" className="h-[242px] sm:h-[398px] xl:h-[448px] w-[280px] sm:w-[468px] xl:w-[518px] absolute -z-10 bottom-[-5%] sm:bottom-[-4%] lg:bottom-[-5%] xl:bottom-[-10%] left-[4%] sm:left-[-25%] lg:left-[-35%]" />
+          <SvgWrapper
+            src="/HeroSectionPng/Yellow.svg"
+            className="h-[242px] sm:h-[398px] xl:h-[448px] w-[280px] sm:w-[468px] xl:w-[518px] absolute -z-10 bottom-[-5%] sm:bottom-[-4%] lg:bottom-[-5%] xl:bottom-[-10%] left-[4%] sm:left-[-25%] lg:left-[-35%]"
+          />
         </div>
       </FlexCenter>
     </SectionWrapper>
