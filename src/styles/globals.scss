@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 p {
-  @apply text-gray-400 w-[241px];
+  @apply text-gray-400 w-[241px]
 }
 
 li,
@@ -21,6 +21,7 @@ body {
   box-sizing: border-box;
 }
 
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -29,5 +30,5 @@ input::-webkit-inner-spin-button {
 }
 
 .section-heading {
-  @apply flex items-center justify-center text-txt-blue text-center;
+  @apply flex justify-center text-txt-blue text-center;
 }

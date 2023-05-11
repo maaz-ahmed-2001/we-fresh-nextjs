@@ -20,7 +20,7 @@ module.exports = {
         'swiper-bg':'#F2F2F2',
         'border':'#E8E8E8',
         'navbar-bg':'#68BAE3'
-      }
+      },
     },
   },
   plugins: [],

@@ -30,7 +30,7 @@ const index = () => {
       <div className="sm:space-y-32 w-full py-5 sm:py-10">
         <div className="gap-3 space-y-5 lg:space-y-10 py-5">
           <SectionHeadings
-            className="block m-auto max-w-[428px] w-full h-[70px] text-center"
+            className="block m-auto max-w-[445px] w-full h-[70px] text-center"
             boldText="services"
             normalText="We've more"
             orientation="normal"

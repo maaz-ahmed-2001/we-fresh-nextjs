@@ -14,10 +14,10 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <FindUsSection />
-      <OurPartnerSection/>
-      <QuerySection/>
-      <GetTheAppSection/>
-      <WeFreshBusinessSection/>
+      <OurPartnerSection />
+      <QuerySection />
+      <GetTheAppSection />
+      <WeFreshBusinessSection />
     </Layout>
   );
 }

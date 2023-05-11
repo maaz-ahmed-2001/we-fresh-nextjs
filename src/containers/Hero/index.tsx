@@ -8,10 +8,7 @@ import InputComponent from "../../common/components/Input";
 import SectionWrapper from "../../common/components/SectionWrapper";
 import SvgWrapper from "../../common/components/SvgWrapper";
 
-
-
-const index = ({ data }: any) => {
-  console.log(data, "hi");
+const index = () => {
   const [number, setNumber] = useState<number>();
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setNumber(Number(event.target.value));
