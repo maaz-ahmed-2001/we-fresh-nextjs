@@ -2,65 +2,113 @@ import React from "react";
 // Components
 import FlexColumn from "../../FlexColumn";
 import FlexCenter from "../../FlexCenter";
-import FieldDescription from '../../FooterFieldDescription'
+import FieldDescription from "../../FooterFieldDescription";
 import { WeFreshLogoSvg } from "../../Icons";
 
 const index = () => {
   const data = [
     {
-      title: "Service Area",
-      description: "Lorem ipsum dol Psum dolor Sum dolor Lorem ipsum",
+      title: "SERVICE AREA",
+      links: [
+        {
+          title: "Lorem ipsum dol",
+          url: "#",
+        },
+        {
+          title: "Psum dolor",
+          url: "#",
+        },
+        {
+          title: "Sum dolor",
+          url: "#",
+        },
+        {
+          title: "Lorem ipsum",
+          url: "#",
+        },
+      ],
     },
     {
-      title: "Service Area",
-      description: "Lorem ipsum dol Psum dolor Sum dolor Lorem ipsum",
+      title: "ABOUT",
+      links: [
+        {
+          title: "Story of WeFresh",
+          url: "#",
+        },
+        {
+          title: "Read our blog",
+          url: "#",
+        },
+        {
+          title: "Sign up to deliver",
+          url: "#",
+        },
+      ],
     },
     {
-      title: "Service Area",
-      description: "Lorem ipsum dol Psum dolor Sum dolor Lorem ipsum",
+      title: "HELP",
+      links: [
+        {
+          title: "Help center",
+          url: "#",
+        },
+        {
+          title: "Read FAQs",
+          url: "#",
+        },
+        {
+          title: "Community",
+          url: "#",
+        },
+        {
+          title: "Security",
+          url: "#",
+        },
+      ],
     },
   ];
   return (
-      <FlexColumn className="gap-7 pt-16 pb-2 px-4 sm:px-5 lg:px-10 bg-bg-blue">
-        {/* MAIN FOOTER */}
-        <FlexCenter className="w-full h-max py-5 !items-start md:p-5 gap-5 md:gap-0 !flex-col md:!flex-row md:!justify-evenly">
-          {/* LOGO */}
-          <div>
-            <WeFreshLogoSvg logoColor="#68BAE3" />
-          </div>
-          {/* MAPPING THE DESCRIPTIONS */}
-          <FlexCenter className="gap-4 flex-2 md:flex-row flex-col md:px-3">
-            {data.map((item, i) => {
-              return (
-                <FieldDescription
-                  key={i}
-                  title={item.title}
-                  description={item.description}
-                />
-              );
-            })}
+    <FlexColumn className="gap-7 pt-16 pb-2 px-4 sm:px-5 lg:px-10 bg-bg-blue">
+      {/* MAIN FOOTER */}
+      <FlexCenter className="w-full h-max py-5 !items-start md:p-5 gap-5 md:gap-0 !flex-col md:!flex-row md:!justify-evenly">
+        {/* LOGO */}
+        <div>
+          <WeFreshLogoSvg logoColor="#68BAE3" />
+        </div>
+        {/* MAPPING THE DESCRIPTIONS */}
+        <FlexCenter className="gap-4 flex-2 md:flex-row !items-start flex-col md:px-3">
+          {data.map((item, i) => {
+            return (
+              <FieldDescription key={i} title={item.title} links={item.links} />
+            );
+          })}
+        </FlexCenter>
+        {/* AVAILABLE ON ICONS */}
+        <FlexColumn className="gap-3 !justify-start">
+          <h6 className="w-full md:w-max">Available on</h6>
+          {/* ICONS */}
+          <FlexCenter className="gap-3">
+            <div className="w-[45px] h-[45px]">
+              <img className="w-full h-full" src="/HeroSectionPng/Apple.png" />
+            </div>
+            <div className="w-[45px] h-[45px]">
+              <img
+                className="w-full h-full"
+                src="/HeroSectionPng/Googleplay.png"
+              />
+            </div>
           </FlexCenter>
-          {/* AVAILABLE ON ICONS */}
-          <FlexColumn className="gap-3 !justify-start">
-            <h6 className="w-full md:w-max" >Available on</h6>
-            {/* ICONS */}
-            <FlexCenter className="gap-3">
-              <div className="w-[45px] h-[45px]">
-                <img className="w-full h-full" src="/HeroSectionPng/Apple.png" />
-              </div>
-              <div className="w-[45px] h-[45px]">
-                <img className="w-full h-full" src="/HeroSectionPng/Googleplay.png" />
-              </div>
-            </FlexCenter>
-          </FlexColumn>
-        </FlexCenter>
-        {/* HR */}
-        <hr className="w-[calc(100%+80px)] bg-border h-[2px]" />
-        {/* ALL RIGHT RESERVED DIV */}
-        <FlexCenter>
-          <p className="!w-full !max-w-max" >© 2020 WeFresh. All Rights Reserved.</p>
-        </FlexCenter>
-      </FlexColumn>
+        </FlexColumn>
+      </FlexCenter>
+      {/* HR */}
+      <hr className="w-[calc(100%+80px)] bg-border h-[2px]" />
+      {/* ALL RIGHT RESERVED DIV */}
+      <FlexCenter>
+        <p className="!w-full !max-w-max">
+          © 2020 WeFresh. All Rights Reserved.
+        </p>
+      </FlexCenter>
+    </FlexColumn>
   );
 };
 

@@ -6,6 +6,11 @@ p {
   @apply text-gray-400 w-[241px]
 }
 
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
 li,
 a {
   cursor: pointer;
