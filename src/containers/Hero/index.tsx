@@ -64,7 +64,7 @@ const index = () => {
             <ActionButton className="h-[35px]">Send</ActionButton>
           </FlexCenter>
           {/* SOCIAL ICONS */}
-          <FlexColumn className="gap-2 lg:!items-start">
+          <FlexColumn className="lg:gap-[24px] gap-[10px] md:gap[17px] lg:!items-start">
             <p className="text-white !w-fit lg:w-full">Available on</p>
             <FlexCenter className="!items-start gap-5">
               {/* APPLE STORE ICON */}
