@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 // Components
 import ActionButton from "../../common/components/Button";
@@ -5,19 +6,38 @@ import { AppleIconSvg } from "../../common/components/Icons";
 import FlexCenter from "../../common/components/FlexCenter";
 import FlexColumn from "../../common/components/FlexColumn";
 import InputComponent from "../../common/components/Input";
+import Modal from "../../common/components/Modal";
 import SectionWrapper from "../../common/components/SectionWrapper";
 import SvgWrapper from "../../common/components/SvgWrapper";
-import Link from "next/link";
 
 const index = () => {
   const [number, setNumber] = useState<number>();
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    setNumber(Number(event.target.value));
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
+  const handelSubmit = () => {
+    if (!number) {
+      return alert("Please Enter a Specific Value");
+    }
+    setIsOpen(true);
+  };
+
+  const handleChange = ({
+    target,
+  }: React.ChangeEvent<HTMLInputElement>): void => {
+    setNumber(Number(target.value));
   };
 
   return (
     // HERO SECTION
     <SectionWrapper className="flex items-center pt-24 justify-center overflow-hidden">
+      {/* MODAL */}
+      <Modal isOpen={isOpen} onClose={handleCloseModal}>
+        <p>You Entered {number}</p>
+      </Modal>
       {/* SVG'S */}
       {/* THE LEFT BLUE ONE */}
       <SvgWrapper
@@ -62,7 +82,9 @@ const index = () => {
               width="300px"
               placeholder="Enter Phone Number."
             />
-            <ActionButton className="h-[35px]">Send</ActionButton>
+            <ActionButton className="h-[35px]" onClickFunc={handelSubmit}>
+              Send
+            </ActionButton>
           </FlexCenter>
           {/* SOCIAL ICONS */}
           <FlexColumn className="lg:gap-[24px] gap-[10px] md:gap[17px] lg:!items-start">
@@ -75,7 +97,9 @@ const index = () => {
                 <AppleIconSvg height="100%" width="100%" />
               </Link>
               {/* GOOGLE PLAYSTORE ICON */}
-              <Link href={'https://play.google.com/'} className="w-[45px] h-[45px]" >
+              <Link
+                href={"https://play.google.com/"}
+                className="w-[45px] h-[45px]">
                 <SvgWrapper
                   src="/HeroSectionPng/Googleplay.png"
                   className="relative cursor-pointer h-full w-full"

@@ -97,3 +97,34 @@ export const CloseIcon = () => {
     </svg>
   );
 };
+
+export const CloseIconBlack = () => {
+  return (
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 15 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="1.84326"
+        y="0.939331"
+        width="18"
+        height="2"
+        rx="1"
+        transform="rotate(45 1.84326 0.939331)"
+        fill="black"
+      />
+      <rect
+        x="14.5713"
+        y="2.35358"
+        width="18"
+        height="2"
+        rx="1"
+        transform="rotate(135 14.5713 2.35358)"
+        fill="black"
+      />
+    </svg>
+  );
+};

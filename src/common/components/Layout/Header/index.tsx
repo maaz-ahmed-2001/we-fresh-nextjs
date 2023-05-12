@@ -1,9 +1,9 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 // Components
-import SectionWrapper from "../../SectionWrapper";
 import { CloseIcon, ThreeBars, WeFreshLogoSvg } from "../../Icons";
 import NavbarSmall from "../../MobileScreenNavbar";
+import SectionWrapper from "../../SectionWrapper";
 // Hooks
 import { useMediaQuery } from "../../../../utils/UseMediaQuery";
 
