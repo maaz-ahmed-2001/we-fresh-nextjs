@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 // Components
 import Accordian from "../../partials/Accordian";
-import FlexCenter from '../../common/components/FlexCenter'
+import FlexCenter from "../../common/components/FlexCenter";
 import FlexColumn from "../../common/components/FlexColumn";
-import InfoBox from '../../partials/InfoBox'
+import InfoBox from "../../partials/InfoBox";
 import SubHeading from "../../common/components/SubHeadings";
 import SectionWrapper from "../../common/components/SectionWrapper";
 
 const index = () => {
   const [isShown, setIsShown] = useState<number[]>([]);
-  const [isMultiple, setIsMultiple] = useState<boolean>(true)
+  const [isMultiple, setIsMultiple] = useState<boolean>(true);
 
   const handleToggle = (id: number) => {
     if (isMultiple) {
@@ -23,15 +23,27 @@ const index = () => {
       // ONE TIME WITH SWITCHING LOGIC
       if (isShown.length !== 0) {
         if (isShown.includes(id)) {
-          setIsShown([])
+          setIsShown([]);
         } else {
-          setIsShown([id])
+          setIsShown([id]);
         }
       } else {
-        setIsShown([id])
+        setIsShown([id]);
+      }
+    }
+    const element = document.getElementById(id.toString());
+
+    const elementHeight = element?.style.height;
+    if (element) {
+      if (!elementHeight || elementHeight === "0px" || elementHeight == "0") {
+        const expectedHeight = element?.scrollHeight;
+        element.style.height = `${expectedHeight}px`;
+      } else {
+        element.style.height = `0px`;
       }
     }
   };
+
   const accordianData = [
     {
       heading: "How to get started?",
