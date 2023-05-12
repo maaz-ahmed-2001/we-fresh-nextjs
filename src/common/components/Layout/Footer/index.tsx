@@ -4,6 +4,7 @@ import FlexColumn from "../../FlexColumn";
 import FlexCenter from "../../FlexCenter";
 import FieldDescription from "../../FooterFieldDescription";
 import { WeFreshLogoSvg } from "../../Icons";
+import Link from "next/link";
 
 const index = () => {
   const data = [
@@ -72,9 +73,9 @@ const index = () => {
       {/* MAIN FOOTER */}
       <FlexCenter className="w-full h-max py-5 !items-start md:p-5 gap-5 md:gap-0 !flex-col md:!flex-row md:!justify-evenly">
         {/* LOGO */}
-        <div>
+        <Link href="/">
           <WeFreshLogoSvg logoColor="#68BAE3" />
-        </div>
+        </Link>
         {/* MAPPING THE DESCRIPTIONS */}
         <FlexCenter className="gap-4 flex-2 md:flex-row !items-start flex-col md:px-3">
           {data.map((item, i) => {
@@ -88,15 +89,15 @@ const index = () => {
           <h6 className="w-full md:w-max">Available on</h6>
           {/* ICONS */}
           <FlexCenter className="gap-3">
-            <div className="w-[45px] h-[45px]">
+            <Link href="https://www.apple.com" className="w-[45px] h-[45px]">
               <img className="w-full h-full" src="/HeroSectionPng/Apple.png" />
-            </div>
-            <div className="w-[45px] h-[45px]">
+            </Link>
+            <Link href="https://play.google.com/" className="w-[45px] h-[45px]">
               <img
                 className="w-full h-full"
                 src="/HeroSectionPng/Googleplay.png"
               />
-            </div>
+            </Link>
           </FlexCenter>
         </FlexColumn>
       </FlexCenter>

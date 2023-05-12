@@ -1,5 +1,6 @@
 // Components
-import FlexCenter from '../../common/components/FlexCenter';
+import Link from "next/link";
+import FlexCenter from "../../common/components/FlexCenter";
 import FlexColumn from "../../common/components/FlexColumn";
 import SectionHeadings from "../../common/components/SectionHeadings";
 import SectionWrapper from "../../common/components/SectionWrapper";
@@ -22,9 +23,19 @@ const index = () => {
           </p>
         </FlexColumn>
         {/* LINKS */}
-        <FlexCenter className='gap-3 !flex-col md:!flex-row ' >
-          <SvgWrapper src="/GetTheAppSection/Apple.png" className="h-[55px] relative w-[165px] md:w-[186px]" />
-          <SvgWrapper src="/GetTheAppSection/Googleplay.png" className="h-[55px] relative w-[165px] md:w-[186px]" />
+        <FlexCenter className="gap-3 !flex-col md:!flex-row ">
+          <Link href="https://www.apple.com">
+            <SvgWrapper
+              src="/GetTheAppSection/Apple.png"
+              className="h-[55px] relative w-[165px] md:w-[186px]"
+            />
+          </Link>
+          <Link href="https://play.google.com/">
+            <SvgWrapper
+              src="/GetTheAppSection/Googleplay.png"
+              className="h-[55px] relative w-[165px] md:w-[186px]"
+            />
+          </Link>
         </FlexCenter>
       </FlexColumn>
     </SectionWrapper>

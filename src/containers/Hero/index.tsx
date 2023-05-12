@@ -7,6 +7,7 @@ import FlexColumn from "../../common/components/FlexColumn";
 import InputComponent from "../../common/components/Input";
 import SectionWrapper from "../../common/components/SectionWrapper";
 import SvgWrapper from "../../common/components/SvgWrapper";
+import Link from "next/link";
 
 const index = () => {
   const [number, setNumber] = useState<number>();
@@ -68,12 +69,18 @@ const index = () => {
             <p className="text-white !w-fit lg:w-full">Available on</p>
             <FlexCenter className="!items-start gap-5">
               {/* APPLE STORE ICON */}
-              <AppleIconSvg height="45px" width="45px" />
+              <Link
+                href={"https://www.apple.com/"}
+                className="w-[45px] h-[45px]">
+                <AppleIconSvg height="100%" width="100%" />
+              </Link>
               {/* GOOGLE PLAYSTORE ICON */}
-              <SvgWrapper
-                src="/HeroSectionPng/Googleplay.png"
-                className="relative cursor-pointer h-[45px] w-[45px]"
-              />
+              <Link href={'https://play.google.com/'} className="w-[45px] h-[45px]" >
+                <SvgWrapper
+                  src="/HeroSectionPng/Googleplay.png"
+                  className="relative cursor-pointer h-full w-full"
+                />
+              </Link>
             </FlexCenter>
           </FlexColumn>
         </FlexColumn>

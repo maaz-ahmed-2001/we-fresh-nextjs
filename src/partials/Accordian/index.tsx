@@ -38,7 +38,7 @@ const index = ({
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isOpen]);
 
   useEffect(() => {
     if (isOpen) return setPanelHeight(headingHeight + paragraphHeight);
