@@ -27,7 +27,10 @@ module.exports = {
       borderRadius: {
         '10':'10px',
         '4':'4px'
-      }
+      },
+      screens: {
+        'small-mobile': '450px'
+      },
     },
   },
   plugins: [],
