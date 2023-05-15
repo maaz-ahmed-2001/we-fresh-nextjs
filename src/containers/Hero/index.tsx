@@ -33,7 +33,7 @@ const index = () => {
 
   return (
     // HERO SECTION
-    <SectionWrapper className="flex items-center pt-24 justify-center overflow-hidden">
+    <SectionWrapper className="flex items-center lg:!pt-28 justify-center overflow-hidden">
       {/* MODAL */}
       <Modal isOpen={isOpen} onClose={handleCloseModal}>
         <p>You Entered {number}</p>
@@ -52,7 +52,7 @@ const index = () => {
       {/* LIGHT BLUE NAVBAR SVG */}
       <SvgWrapper
         src="/HeroSectionPng/LightBlueNavbarImage.svg"
-        className="h-full -z-10 w-full hidden lg:block max-w-[632px] xl:max-w-[732px] max-h-[548px] xl:max-h-[548px] absolute top-[-30%] lg:top-[-34%] xl:top-[-35%] 2xl:top-[-34%] left-[50%] lg:left-[46%] xl:left-[50%]"
+        className="h-full -z-10 w-full hidden lg:block max-w-[632px] xl:max-w-[732px] max-h-[548px] xl:max-h-[548px] absolute top-[-30%] lg:top-[-30%] xl:top-[-32%]  left-[50%] lg:left-[46%] xl:left-[50%]"
       />
 
       {/* RIGHT BLUE SVG */}
