@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-p {
-  @apply text-gray-400 w-[241px]
-}
-
-li {
-  list-style: none;
-  text-decoration: none;
-}
-
-li,
-a {
-  cursor: pointer;
-}
-
 body {
   background-color: #fff;
   margin: 0;
@@ -26,12 +12,25 @@ body {
   box-sizing: border-box;
 }
 
-
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+p {
+  @apply text-gray-400 w-[241px];
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+li,
+a {
+  cursor: pointer;
 }
 
 .section-heading {

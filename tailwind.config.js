@@ -23,6 +23,10 @@ module.exports = {
       },
       fontSize: {
         'f-22': '22px'
+      },
+      borderRadius: {
+        '10':'10px',
+        '4':'4px'
       }
     },
   },

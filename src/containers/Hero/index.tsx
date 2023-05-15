@@ -80,7 +80,7 @@ const index = () => {
               onChangeFunc={handleChange}
               height="35px"
               width="300px"
-              placeholder="Enter Phone Number."
+              placeholder="Enter phone number"
             />
             <ActionButton className="h-[35px]" onClickFunc={handelSubmit}>
               Send

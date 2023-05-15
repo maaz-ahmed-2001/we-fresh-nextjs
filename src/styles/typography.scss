@@ -43,6 +43,11 @@ button {
   font-size: 22px;
 }
 
+input,
+input::placeholder {
+  font-size: 16px;
+}
+
 @media (min-width: 768px) {
   h2 {
     font-size: 38px;
