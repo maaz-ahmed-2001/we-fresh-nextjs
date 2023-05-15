@@ -1,6 +1,5 @@
 import { useRef } from "react";
-// Hooks
-import { useMediaQuery } from "../../utils/UseMediaQuery";
+
 
 type AccordianProps = {
   paragraph: string;
@@ -18,7 +17,6 @@ const index = ({
   isOpen,
 }: AccordianProps) => {
   const DivRef = useRef();
-  const isTablet = useMediaQuery("(max-width: 640px)");
 
   return (
     <div
@@ -31,7 +29,7 @@ const index = ({
       <div id={id.toString()} className="h-[0px] transition-all duration-300">
         <div
           className={`w-full flex items-start md:mt-[12px] pt-[14px] md:pt-[20px] pr-[59px] md:pr-[60px] pb-[15px] md:pb-[28px] pl-[20px] md:pl-[41px] justify-center  duration-300 border-b-2 sm:border-2 gap-[14px] md:gap-[12px] sm:rounded-md md:border-txt-blue border-b-border sm:border-border flex-col overflow-hidden`}>
-          <h5 className={`${ isOpen && "text-txt-blue"}`}>{heading}</h5>
+          <h5 className="text-txt-blue">{heading}</h5>
           <p className={`sm:max-w-[679px] transition-all duration-500 w-full`}>
             {paragraph}
           </p>

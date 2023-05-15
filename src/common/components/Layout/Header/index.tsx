@@ -58,14 +58,17 @@ const index = () => {
         <SectionWrapper zIndex="30" className="!p-0">
           <nav className="flex items-center z-30 px-5 md:px-0 justify-between md:justify-around">
             {/* LOGO */}
-            <Link href='/' >
+            <Link href="/">
               <WeFreshLogoSvg />
             </Link>
             {/* LINKS  */}
             <ul className="md:flex gap-8 hidden">
               {links.map((item, i) => {
                 return (
-                  <Link href={item.url} key={i}>
+                  <Link
+                    href={item.url}
+                    key={i}
+                    className="hover:scale-105 transition-transform duration-300">
                     <li>{item.title}</li>
                   </Link>
                 );
