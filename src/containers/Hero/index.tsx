@@ -33,7 +33,7 @@ const index = () => {
 
   return (
     // HERO SECTION
-    <SectionWrapper className="flex items-center lg:!pt-28 justify-center overflow-hidden">
+    <SectionWrapper className="flex items-center !pt-20 lg:!pt-28 justify-center overflow-hidden">
       {/* MODAL */}
       <Modal isOpen={isOpen} onClose={handleCloseModal}>
         <p>You Entered {number}</p>

@@ -54,9 +54,9 @@ const index = () => {
 
   return (
     <>
-      <header className="absolute w-full top-0 left-0  pt-5">
+      <header className="absolute w-full top-0 left-0  pt-[15px]">
         <SectionWrapper zIndex="30" className="!p-0">
-          <nav className="flex items-center z-30 px-5 md:px-0 justify-between md:justify-around">
+          <nav className="flex items-center pl-[19px] pr-[20px] z-30 md:pl-0 md:pr-0 justify-between md:justify-around">
             {/* LOGO */}
             <Link href="/">
               <WeFreshLogoSvg />
