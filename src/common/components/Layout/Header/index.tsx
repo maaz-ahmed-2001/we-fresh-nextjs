@@ -84,7 +84,7 @@ const index = () => {
             ) : (
               <div
                 onClick={() => setIsShown(true)}
-                className="w-5 h-5 mr-5 block md:hidden">
+                className="w-5 h-5 mr-3 block md:hidden">
                 <ThreeBars />
               </div>
             )}
