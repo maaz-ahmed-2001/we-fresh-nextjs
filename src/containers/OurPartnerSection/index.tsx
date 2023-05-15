@@ -22,7 +22,7 @@ const index = () => {
                 normalText="Our"
                 className="max-w-[264px] lg:!justify-start text-center w-full h-full max-h-[70px]"
               />
-              <p className="max-h-[120px] max-w-[326px]">
+              <p className="max-w-[326px]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. sed
                 do eiusmod.

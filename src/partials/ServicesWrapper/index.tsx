@@ -11,7 +11,7 @@ const index = ({ src, text }: ServicesWrapperProps) => {
       <div className="max-w-[120px] w-full h-[120px]">
         <img src={src} className="w-full h-full" alt={text} />
       </div>
-      <p className="text-center !w-full !max-w-[241px] group-hover:text-txt-blue ">
+      <p className="text-center f-22 !w-full !max-w-[241px] group-hover:text-txt-blue ">
         {text}
       </p>
     </div>

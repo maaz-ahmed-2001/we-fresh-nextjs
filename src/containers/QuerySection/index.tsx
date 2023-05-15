@@ -75,7 +75,7 @@ const index = () => {
     <SectionWrapper className="px-0">
       <FlexColumn className="gap-5 py-2">
         <SubHeading text="Got Questions?" />
-        <p className="max-w-[294px] w-full text-center">
+        <p className="max-w-[294px] sec-desc w-full md:text-f-22 text-center">
           Perfect, we've got answers!
         </p>
         {/* QUESTIONS */}
@@ -97,7 +97,7 @@ const index = () => {
         {/* STILL HAVE A QUESTION DIV */}
         <FlexColumn className="gap-6 py-3 w-[90%] sm:w-full h-max ">
           <SubHeading text="Still have a question?" />
-          <p className="max-w-[704px] w-full text-center">
+          <p className="max-w-[704px] md:text-f-22 sec-desc w-full text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore
           </p>

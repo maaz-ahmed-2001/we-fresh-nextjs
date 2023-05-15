@@ -7,12 +7,19 @@ body {
 h2,
 h3 {
   font-size: 22px;
+}
+
+h2 {
   line-height: 33px;
+}
+
+h3 {
+  line-height: 30px;
 }
 
 h5 {
   font-size: 16px;
-  font-family: 400;
+  font-weight: 400;
 }
 h6 {
   font-size: 16px;
@@ -27,6 +34,15 @@ li {
 b {
   font-weight: 600;
 }
+
+button {
+  font-size: 16px;
+}
+
+.f-22 {
+  font-size: 22px;
+}
+
 @media (min-width: 768px) {
   h2 {
     font-size: 38px;
@@ -50,5 +66,8 @@ b {
   }
   h5 {
     font-size: 20px;
+  }
+  .sec-desc {
+    line-height: 33px;
   }
 }
