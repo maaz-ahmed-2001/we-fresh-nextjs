@@ -76,7 +76,7 @@ const index = () => {
             </b>
           </h2>
           {/* FORM DIV */}
-          <FlexCenter className="gap-3 flex-wrap">
+          <FlexCenter className="gap-3 px-3 small-mobile:px-0">
             <InputComponent
               type="number"
               state={number}
