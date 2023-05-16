@@ -47,7 +47,7 @@ const index = () => {
           </p>
         </FlexColumn>
         {/* LITTLE FORM */}
-        <FlexCenter className="gap-6">
+        <FlexCenter className="gap-6 flex-wrap">
           <TextInput
             placeholder="Enter phone number"
             state={number}
