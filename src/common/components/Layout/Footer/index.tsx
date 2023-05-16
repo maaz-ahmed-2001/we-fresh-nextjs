@@ -85,8 +85,8 @@ const index = () => {
           })}
         </FlexCenter>
         {/* AVAILABLE ON ICONS */}
-        <FlexColumn className="gap-3 !justify-start">
-          <h6 className="w-full md:w-max">Available on</h6>
+        <FlexColumn className="gap-3 w-full md:!w-fit !justify-start">
+          <h6 className="w-full text-center md:w-max">Available on</h6>
           {/* ICONS */}
           <FlexCenter className="gap-3">
             <Link href="https://www.apple.com" className="w-[45px] h-[45px]">

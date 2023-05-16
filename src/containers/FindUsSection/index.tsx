@@ -43,7 +43,7 @@ const index = () => {
             orientation="normal"
             className="w-full md:!justify-start max-w-[441px] !text-left h-[70px]"
           />
-          <FlexCenter className="gap-3 justify-center md:!justify-start ">
+          <FlexCenter className="gap-3 flex-wrap justify-center md:!justify-start ">
             <TextInput
               placeholder="Enter your area"
               type=""
