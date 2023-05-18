@@ -69,7 +69,7 @@ const index = () => {
                     href={item.url}
                     key={i}
                     className="hover:scale-105 transition-transform duration-300">
-                    <li>{item.title}</li>
+                    <li className="navlink" >{item.title}</li>
                   </Link>
                 );
               })}
