@@ -15,7 +15,7 @@ type FieldDescriptionProps = {
 const index = ({ title, links }: FieldDescriptionProps) => {
   return (
     <FlexColumn className="md:p-4 py-5 cursor-pointer md:items-start md:py-0 gap-4">
-      <h6 className="md:max-w-[114px] w-full">{title}</h6>
+      <h6 className="w-full">{title}</h6>
       <div className="w-full">
         {links.map((link, i) => {
           return (
