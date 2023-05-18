@@ -39,18 +39,19 @@ const index = () => {
         <p>You Entered {number}</p>
       </Modal>
       {/* SVG'S */}
+      {/* SMALL SCREEN LIGHT BLUE SVG */}
+      <SvgWrapper src="/HeroSectionPng/SmallScreenLightBlue.png" className="absolute sm:hidden block h-[492px] w-[657px] -z-20 right-[10%] small-mobile:right-[20%] top-[3%] small-mobile:top-[5%] " />
       {/* BLUE IMAGE FOR SMALL SCREEN DEVICES */}
-      <SvgWrapper src="/HeroSectionPng/SmallScreenBlueImage.png" className="block sm:hidden w-[468px] small-mobile:w-full h-[447px] small-mobile:h-[497px] top-[-6%] small-mobile:top-[-10%] absolute  -z-10" />
+      <SvgWrapper src="/HeroSectionPng/SmallScreenBlueImage.png" className="block sm:hidden w-[468px] small-mobile:w-full h-[447px] small-mobile:h-[497px] top-[-6%] small-mobile:top-[-10%] absolute -z-10" />
       {/* THE LEFT BLUE ONE */}
       <SvgWrapper
         src="/HeroSectionPng/LeftBlueImage.svg"
-        // imageClassName="object-cover sm:object-fill"
-        className="absolute lg:rotate-0 rotate-90 hidden sm:block scale-[2.2] sm:scale-[2] lg:scale-100 sm:top-[-46%] md:top-[-40%] lg:top-[0%] left-[-17%] md:left-[-16%] lg:left-[-22%] xl:left-[-10%] 2xl:left-[0%] -z-10 h-full w-full max-h-[397px] sm:max-h-[689px] xl:max-h-[889px] xl:max-w-[1139px]"
+        className="absolute lg:rotate-0 rotate-90 hidden sm:block scale-[2.2] sm:scale-[2] lg:scale-100 sm:top-[-46%] md:top-[-40%] lg:top-[0%] left-[-17%] md:left-[-12%] lg:left-[-22%] xl:left-[-10%] 2xl:left-[0%] -z-10 h-full w-full max-h-[397px] sm:max-h-[689px] xl:max-h-[889px] xl:max-w-[1139px]"
       />
       {/* LIGHT BLUE SVG */}
       <SvgWrapper
         src="/HeroSectionPng/LightBlueImage.svg"
-        className="w-full h-full max-w-[557px] xl:max-w-[657px] max-h-[392px] xl:max-h-[492px] absolute -z-20 left-[-15%] small-mobile:left-[-15%] sm:left-[-6%] md:left-[8%] lg:left-[3%] xl:left-[8%] 2xl:left-[15%] top-[20%] small-mobile:top-[15%] sm:top-[18%] md:top-[25%] lg:top-[40%] xl:top-[30%] 2xl:top-[33%]"
+        className="h-full hidden sm:block w-[657px] absolute -z-20 left-[-15%] md:left-[2%] lg:left-[-8%] xl:left-[5%] 2xl:left-[15%] top-[-15%] md:top-[-11%] lg:top-[10%] xl:top-[15%] 2xl:top-[17%]"
       />
       {/* LIGHT BLUE NAVBAR SVG */}
       <SvgWrapper
