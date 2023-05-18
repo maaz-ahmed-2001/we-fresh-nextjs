@@ -18,7 +18,7 @@ const index = ({ isShown, links }: NavbarSmallProps) => {
     <FlexColumn
       className={`px-5 z-20 -translate-y-full transition-transform ${
         isShown && "translate-y-0"
-      }  transition-opacity absolute pt-[73px] !items-start gap-5 !justify-start top-0 right-0 bg-navbar-bg h-screen w-full`}>
+      }  transition-opacity absolute pt-[95px] !items-start gap-5 !justify-start top-0 right-0 bg-navbar-bg h-screen w-full`}>
       <div
         className={` ${
           isShown ? "opacity-100" : "opacity-0"
@@ -29,7 +29,7 @@ const index = ({ isShown, links }: NavbarSmallProps) => {
             <div
               key={i}
               className="flex text-white font-normal items-start flex-col gap-3 mb-5 justify-center">
-              <Link className="hover:scale-105 transition-transform duration-300" href={link.url}>{link.title}</Link>
+              <Link className="hover:scale-105 navlink transition-transform duration-300" href={link.url}>{link.title}</Link>
               {/* DIVIDER */}
               <div className="divide-y h-[1px] w-full bg-light-grey " />
             </div>
