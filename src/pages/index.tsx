@@ -9,7 +9,8 @@ import ServicesSection from "../containers/ServiceSection";
 import WeFreshBusinessSection from "../containers/WeFreshBusinessSection";
 import Head from "next/head";
 
-export default function Home() {
+export default function Home({ data }: any) {
+  console.log(data);
   return (
     <>
       <Head>
@@ -50,4 +51,10 @@ export default function Home() {
       </Layout>
     </>
   );
+}
+
+export async function getStaticProps(context: any) {
+  return {
+    props: {},
+  };
 }
